@@ -14,6 +14,9 @@ const Header = () => {
           title
         }
       }
+      siteBuildMetadata {
+        buildTime
+      }
     }
   `);
 
