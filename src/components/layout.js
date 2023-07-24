@@ -9,6 +9,7 @@ import {
   siteTitle,
   footerTitle,
   footerBar,
+  modalButton,
 } from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
@@ -23,7 +24,11 @@ const Layout = ({ pageTitle, children }) => {
   `);
   return (
     <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+      <header>
+        <Link to="/" className={siteTitle}>
+          {data.site.siteMetadata.title}
+        </Link>
+      </header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -45,6 +50,14 @@ const Layout = ({ pageTitle, children }) => {
             <Link to="/services" className={navLinkText}>
               Services
             </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/artwork" className={navLinkText}>
+              Artwork
+            </Link>
+          </li>
+          <li lassName={navLinkItem}>
+            <button className={modalButton}>modarl</button>
           </li>
         </ul>
       </nav>
