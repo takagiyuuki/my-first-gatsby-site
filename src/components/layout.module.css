@@ -1,7 +1,7 @@
 div {
   background-color: #03d069;
   border: solid;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Jost, Helvetica, sans-serif; */
 }
 main {
   background-color: #03d069;
@@ -23,11 +23,11 @@ nav {
 .container {
   margin: auto;
   max-width: 500px;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
 }
 
 .heading {
-  color: rebeccapurple;
+  color: black;
 }
 .nav-links {
   display: flex;
@@ -65,7 +65,7 @@ nav {
   font-size: 1rem;
   color: white;
   text-align: center;
-  margin: 3rem 0;
+  margin: 1rem 0 0 0;
   border: solid;
 }
 
@@ -76,10 +76,11 @@ nav {
   box-sizing: border-box;
   border: solid;
 }
-.modal-button {
-  background-color: black;
-  color: #fff;
-  font-weight: bold;
+
+.bloglink-text {
   text-decoration: none;
-  cursor: pointer;
+}
+
+.bloglink-text:hover {
+  color: white;
 }

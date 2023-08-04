@@ -9,9 +9,7 @@ import {
   siteTitle,
   footerTitle,
   footerBar,
-  modalButton,
 } from "./layout.module.css";
-
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -56,9 +54,6 @@ const Layout = ({ pageTitle, children }) => {
               Artwork
             </Link>
           </li>
-          <li lassName={navLinkItem}>
-            <button className={modalButton}>modarl</button>
-          </li>
         </ul>
       </nav>
       <main>
@@ -66,7 +61,7 @@ const Layout = ({ pageTitle, children }) => {
         {children}
       </main>
       <footer className={footerBar}>
-        <p className={footerTitle}>this is me.</p>
+        <p className={footerTitle}>Takagi Yuki © 2023 -</p>
       </footer>
     </div>
   );
