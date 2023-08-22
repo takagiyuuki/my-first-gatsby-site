@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
   heading,
+  navBar,
   navLinks,
   navLinkItem,
   navLinkText,
@@ -27,7 +28,7 @@ const Layout = ({ pageTitle, children }) => {
           {data.site.siteMetadata.title}
         </Link>
       </header>
-      <nav>
+      <nav className={navBar}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
