@@ -26,5 +26,8 @@
     "react-dom": "^18.2.0",
     "react-typography": "^0.16.23",
     "typography": "^0.16.24"
+  },
+  "devDependencies": {
+    "yarnlock-dedupe-check": "^2.1.1"
   }
 }
