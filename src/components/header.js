@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 // Step 1: Import the useStaticQuery hook and graphql tag
 import { useStaticQuery, graphql } from "gatsby";

@@ -3,12 +3,14 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
   heading,
+  navBar,
   navLinks,
   navLinkItem,
   navLinkText,
   siteTitle,
+  footerTitle,
+  footerBar,
 } from "./layout.module.css";
-
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -21,8 +23,12 @@ const Layout = ({ pageTitle, children }) => {
   `);
   return (
     <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
-      <nav>
+      <header>
+        <Link to="/" className={siteTitle}>
+          {data.site.siteMetadata.title}
+        </Link>
+      </header>
+      <nav className={navBar}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
@@ -39,12 +45,25 @@ const Layout = ({ pageTitle, children }) => {
               Blog
             </Link>
           </li>
+          <li className={navLinkItem}>
+            <Link to="/services" className={navLinkText}>
+              Services
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link to="/artwork" className={navLinkText}>
+              Artwork
+            </Link>
+          </li>
         </ul>
       </nav>
       <main>
         <h1 className={heading}>{pageTitle}</h1>
         {children}
       </main>
+      <footer className={footerBar}>
+        <p className={footerTitle}>Takagi Yuki © 2023 -</p>
+      </footer>
     </div>
   );
 };
