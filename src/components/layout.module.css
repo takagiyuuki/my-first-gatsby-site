@@ -102,17 +102,19 @@ footer {
 }
 
 /* Phone Design */
-
+/**
 @media (max-width: 768px) {
   .navBar {
     width: 358px;
   }
 }
+*/
 
 /* Tablet Design */
-
+/**
 @media (max-width: 1199px) and (min-width: 769px) {
     .navBar {
     width: 358px;
   }
 }
+*/
