@@ -6,7 +6,7 @@ module.exports = {
     title: `Portfolio website`,
     description: `Example project for the Gatsby Head API`,
     twitterUsername: `@yuukimizuiro`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.yourdomain.com`,
     image: `/gatsby-icon.png`,
   },
   plugins: [
