@@ -5,8 +5,8 @@ module.exports = {
   siteMetadata: {
     title: `Portfolio website`,
     description: `Example project for the Gatsby Head API`,
-    /** twitterUsername: `@gatsbyjs`, */
-    /** siteUrl: `https://www.yourdomain.tld`, */
+    twitterUsername: `@yuukimizuiro`,
+    siteUrl: `https://www.yourdomain.com`,
     image: `/gatsby-icon.png`,
   },
   plugins: [
