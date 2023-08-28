@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
-import Seo from "../../components/seo";
+import { SEO } from "../../components/seo";
 
 const ArtworkPage = ({ data }) => {
   return (
@@ -36,6 +36,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="My Artwork" />;
+export const Head = () => <SEO title="My Artwork" />;
 
 export default ArtworkPage;

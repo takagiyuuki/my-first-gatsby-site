@@ -10,6 +10,8 @@ module.exports = {
     image: `/gatsby-icon.png`,
   },
   plugins: [
+    // SEO Meta tag plugin
+    // "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     {
