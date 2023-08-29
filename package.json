@@ -31,9 +31,6 @@
     "typescript": "5.2.2",
     "typography": "^0.16.24"
   },
-  "devDependencies": {
-    "yarnlock-dedupe-check": "^2.1.1"
-  },
   "main": "index.js",
   "repository": "https://github.com/takagiyuuki/portfolio.git",
   "license": "MIT"
