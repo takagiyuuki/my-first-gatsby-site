@@ -47,3 +47,13 @@
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+
+
+## Setting | Cloudflare
+
+### Environment variables
+
+|Variable name |Value|
+| --- | --- |
+|`NODE_VERSION`|`20.5.1`|
+|`NPM_VERSION`|`9.8.1`|
