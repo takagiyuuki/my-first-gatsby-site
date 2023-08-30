@@ -15,10 +15,17 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.22.11",
     "gatsby": "^5.12.3",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-mdx": "^5.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-plugin-typography": "^5.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@babel/eslint-parser": "^7.22.11"
+    "react-typography": "^0.16.23",
+    "typography": "^0.16.24"
   },
   "overrides": {
     "react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825": {
