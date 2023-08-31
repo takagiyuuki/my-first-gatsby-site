@@ -89,7 +89,6 @@ header {
 
 main {
   flex: 1;
-  border: solid;
   padding-left: 1rem;
   .heading {
     color: var(--text-strong);
@@ -103,24 +102,28 @@ main {
     color: var(--text-main);
   }
 }
-
 .link-title {
   color: #03d069;
   &:hover {
     color: var(--text-hover);
   }
 }
-/* Footer Design */
 
+/* Footer Design */
 .footer-bar {
-  background-color: var(--background-alt);
+  background-color: var(--background);
   padding: auto;
   margin: 0;
-  border-top: solid var(--border-color);
+  border: var(--border-color-alt);
+  border-top: solid;
+  border-width: thin;
   .footer-title {
     font-size: 0.5em;
-    color: var(--text-menu);
-    text-align: center;
+    color: var(--text-main);
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     margin: 0;
   }
 }
