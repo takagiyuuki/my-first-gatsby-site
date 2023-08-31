@@ -11,7 +11,11 @@ const ArtworkPage = ({ data }) => {
           <h2>
             <Link
               to={`/artwork/${node.frontmatter.slug}`}
-              style={{ textDecoration: "none", color: "#cdcdcd" }}
+              style={{
+                textDecoration: "none",
+                color: "#cdcdcd",
+                textShadow: "1px 1px 0 ##eeeeee",
+              }}
             >
               {node.frontmatter.title}
             </Link>
