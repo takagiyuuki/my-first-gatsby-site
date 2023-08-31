@@ -10,7 +10,14 @@ import {
   siteTitle,
   footerTitle,
   footerBar,
+  onoffswitch,
+  onoffswitchCheckbox,
+  onoffswitchLabel,
 } from "./layout.module.scss";
+import { exportFunction } from "./darkmode.js";
+
+exportFunction.Switchdarkmode;
+
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -27,6 +34,16 @@ const Layout = ({ pageTitle, children }) => {
         <Link to="/" className={siteTitle}>
           {data.site.siteMetadata.title}
         </Link>
+        <div className={onoffswitch}>
+          <input
+            type="checkbox"
+            name="onoffswitch"
+            className={onoffswitchCheckbox}
+            id="myonoffswitch"
+            tabIndex={0}
+          />
+          <label className={onoffswitchLabel} htmlFor="myonoffswitch" />
+        </div>
       </header>
       <nav className={navBar}>
         <ul className={navLinks}>
