@@ -10,9 +10,6 @@ import {
   siteTitle,
   footerTitle,
   footerBar,
-  onoffswitch,
-  onoffswitchCheckbox,
-  onoffswitchLabel,
 } from "./layout.module.scss";
 
 const Layout = ({ pageTitle, children }) => {
@@ -66,7 +63,7 @@ const Layout = ({ pageTitle, children }) => {
         {children}
       </main>
       <footer className={footerBar}>
-        <p className={footerTitle}>Takagi Yuki © 2023 -</p>
+        <p className={footerTitle}>© Takagi Yuki</p>
       </footer>
     </div>
   );

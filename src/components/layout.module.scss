@@ -10,6 +10,7 @@
   --accent: lightseagreen;
   --focus: #4a8aa1;
   --visited: violet;
+  --border-color: #222222;
 }
 
 /* Valiables - Dark Mode */
@@ -24,27 +25,24 @@
     --accent: lightseagreen;
     --focus: #4a8aa1;
     --visited: violet;
+    --border-color: rgb(205, 205, 205);
   }
 }
+
 /* Whole Page */
-body {
+.container {
+  margin: auto;
+  background-color: var(--background-body);
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.container {
-  margin: auto;
-  background-color: var(--background-body);
-  /* max-width: 500px; */
-}
-
 /* Site Tittle */
-
 header {
-  border: solid;
   background-color: var(--background-alt);
   .site-title {
+    padding-left: 1rem;
     font-size: 2rem;
     max-width: max-content;
     min-width: min-content;
@@ -92,9 +90,11 @@ header {
 main {
   flex: 1;
   border: solid;
+  padding-left: 1rem;
   .heading {
     color: var(--text-strong);
     margin-bottom: 0;
+    padding-top: 1rem;
   }
   p {
     color: var(--text-main);
@@ -116,13 +116,11 @@ main {
   background-color: var(--background-alt);
   padding: auto;
   margin: 0;
-  box-sizing: border-box;
-  border: solid;
+  border-top: solid var(--border-color);
   .footer-title {
-    font-size: 1em;
+    font-size: 0.5em;
     color: var(--text-menu);
     text-align: center;
     margin: 0;
-    border: solid;
   }
 }
