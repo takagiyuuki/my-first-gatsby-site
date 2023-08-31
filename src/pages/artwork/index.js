@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
-import { SEO } from "../../components/seo";
+import { Seo } from "../../components/seo";
 
 const ArtworkPage = ({ data }) => {
   return (
@@ -9,7 +9,10 @@ const ArtworkPage = ({ data }) => {
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
           <h2>
-            <Link to={`/blog/${node.frontmatter.slug}`}>
+            <Link
+              to={`/artwork/${node.frontmatter.slug}`}
+              style={{ textDecoration: "none", color: "#cdcdcd" }}
+            >
               {node.frontmatter.title}
             </Link>
           </h2>
@@ -31,11 +34,12 @@ export const query = graphql`
           slug
         }
         id
+        excerpt
       }
     }
   }
 `;
 
-export const Head = () => <SEO title="My Artwork" />;
+export const Head = () => <Seo title="My Artwork" />;
 
 export default ArtworkPage;

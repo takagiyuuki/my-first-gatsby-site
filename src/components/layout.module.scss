@@ -1,43 +1,67 @@
 /* Valiables */
-:root {
-  --light-bg-color: white;
-  --light-primaly-color: black;
-  --light-secondly-color: navy;
+
+/* Light Mode */
+body {
+  --background-body: #03d069;
+  --background-alt: #222222;
+  --text-menu: rgb(205, 205, 205);
+  --text-strong: #222222;
+  --text-main: #444444;
+  --text-muted: #888888;
+  --text-hover: #eeeeee;
+  --accent: lightseagreen;
+  --focus: #4a8aa1;
+  --visited: violet;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    --background-body: #222222;
+    --background-alt: #222222;
+    --text-strong: #eeeeee;
+    --text-main: rgb(205, 205, 205);
+    --text-muted: #888888;
+    --text-hover: #eeeeee;
+    --accent: lightseagreen;
+    --focus: #4a8aa1;
+    --visited: violet;
+  }
 }
 
 /* Whole Page */
-body {
-  background-color: #03d069;
-  border: solid;
-  .container {
-    margin: auto;
-    /* max-width: 500px; */
-  }
+.container {
+  margin: auto;
+  background-color: var(--background-body);
+  /* max-width: 500px; */
 }
 
 /* Site Tittle */
 
 header {
-  background-color: #03d069;
   border: solid;
+  background-color: var(--background-alt);
   .site-title {
     font-size: 2rem;
     max-width: max-content;
     min-width: min-content;
-    color: Black;
+    color: var(--text-menu);
     font-weight: 700;
     text-decoration: none;
     &:hover {
-      color: white;
+      color: var(--text-hover);
     }
   }
 }
 
 /* Navigation Bar Design */
-
 .nav-bar {
-  background-color: black;
+  background-color: var(--background-alt);
   border: solid;
+  /* Tablet Design */
+  @media (max-width: 500px) {
+    display: none;
+  }
   .nav-links {
     visibility: visible;
     display: flex;
@@ -45,16 +69,12 @@ header {
     padding-left: 0;
     margin-bottom: 0;
     margin-left: 0;
-    /* Tablet Design */
-    @media (max-width: 500px) {
-      visibility: hidden;
-    }
     .nav-link-item {
       padding-right: 1rem;
       padding-left: 1rem;
       margin-bottom: 0;
       .nav-link-text {
-        color: rgb(205, 205, 205);
+        color: var(--text-menu);
         font-weight: bold;
         text-decoration: none;
         &:hover {
@@ -70,22 +90,34 @@ header {
 main {
   border: solid;
   .heading {
-    color: black;
+    color: var(--text-strong);
     margin-bottom: 0;
+  }
+  p {
+    color: var(--text-main);
+  }
+  h2 {
+    color: var(--text-main);
   }
 }
 
+.link-title {
+  color: #03d069;
+  &:hover {
+    color: var(--text-hover);
+  }
+}
 /* Footer Design */
 
 .footer-bar {
-  background-color: black;
+  background-color: var(--background-alt);
   padding: auto;
   margin: 0;
   box-sizing: border-box;
   border: solid;
   .footer-title {
     font-size: 1rem;
-    color: white;
+    color: var(--text-menu);
     text-align: center;
     margin: 1rem 0 0 0;
     border: solid;
@@ -95,8 +127,6 @@ main {
 .bloglink-text {
   text-decoration: none;
   &:hover {
-    color: white;
+    color: var(--text-menu);
   }
 }
-
-/* Dark Mode */
