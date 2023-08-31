@@ -1,0 +1,120 @@
+body {
+  background-color: #03d069;
+  border: solid;
+}
+
+main {
+  border: solid;
+}
+
+.container {
+  margin: auto;
+  max-width: 500px;
+}
+
+/* Site Tittle */
+
+header {
+  background-color: #03d069;
+  border: solid;
+}
+
+.site-title {
+  font-size: 2rem;
+  max-width: max-content;
+  min-width: min-content;
+  color: Black;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: white;
+}
+
+/* Navigation Bar Design */
+
+.nav-bar {
+  background-color: black;
+  border: solid;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.nav-link-item {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.nav-link-text {
+  color: rgb(205, 205, 205);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-link-text:hover {
+  color: white;
+}
+
+/* Contents Design */
+
+.heading {
+  color: black;
+  margin-bottom: 0;
+}
+
+/* Footer Design */
+
+footer {
+  background-color: black;
+  border: solid;
+}
+
+.footer-title {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  margin: 1rem 0 0 0;
+  border: solid;
+}
+
+.footer-bar {
+  background-color: black;
+  padding: auto;
+  margin: 0;
+  box-sizing: border-box;
+  border: solid;
+}
+
+.bloglink-text {
+  text-decoration: none;
+}
+
+.bloglink-text:hover {
+  color: white;
+}
+
+/* Phone Design */
+/**
+@media (max-width: 768px) {
+  .navBar {
+    width: 358px;
+  }
+}
+*/
+
+/* Tablet Design */
+/**
+@media (max-width: 1199px) and (min-width: 769px) {
+    .navBar {
+    width: 358px;
+  }
+}
+*/

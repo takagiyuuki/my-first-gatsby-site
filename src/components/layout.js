@@ -10,7 +10,7 @@ import {
   siteTitle,
   footerTitle,
   footerBar,
-} from "./layout.module.css";
+} from "./layout.module.scss";
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {

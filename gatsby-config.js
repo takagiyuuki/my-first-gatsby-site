@@ -14,6 +14,8 @@ module.exports = {
     // "gatsby-plugin-react-helmet",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-sass",
+    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -28,7 +30,6 @@ module.exports = {
         path: `${__dirname}/artwork`,
       },
     },
-    "gatsby-plugin-mdx",
     {
       resolve: `gatsby-plugin-typography`,
       options: {

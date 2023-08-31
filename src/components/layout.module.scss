@@ -1,0 +1,102 @@
+/* Valiables */
+:root {
+  --light-bg-color: white;
+  --light-primaly-color: black;
+  --light-secondly-color: navy;
+}
+
+/* Whole Page */
+body {
+  background-color: #03d069;
+  border: solid;
+  .container {
+    margin: auto;
+    /* max-width: 500px; */
+  }
+}
+
+/* Site Tittle */
+
+header {
+  background-color: #03d069;
+  border: solid;
+  .site-title {
+    font-size: 2rem;
+    max-width: max-content;
+    min-width: min-content;
+    color: Black;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+/* Navigation Bar Design */
+
+.nav-bar {
+  background-color: black;
+  border: solid;
+  .nav-links {
+    visibility: visible;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    /* Tablet Design */
+    @media (max-width: 500px) {
+      visibility: hidden;
+    }
+    .nav-link-item {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin-bottom: 0;
+      .nav-link-text {
+        color: rgb(205, 205, 205);
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Contents Design */
+
+main {
+  border: solid;
+  .heading {
+    color: black;
+    margin-bottom: 0;
+  }
+}
+
+/* Footer Design */
+
+.footer-bar {
+  background-color: black;
+  padding: auto;
+  margin: 0;
+  box-sizing: border-box;
+  border: solid;
+  .footer-title {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin: 1rem 0 0 0;
+    border: solid;
+  }
+}
+
+.bloglink-text {
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
+
+/* Dark Mode */
