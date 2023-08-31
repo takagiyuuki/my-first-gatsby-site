@@ -1,0 +1,126 @@
+/* Valiables - Light Mode */
+:root {
+  --background-body: #03d069;
+  --background-alt: #222222;
+  --text-menu: rgb(205, 205, 205);
+  --text-strong: #222222;
+  --text-main: #444444;
+  --text-muted: #888888;
+  --text-hover: #eeeeee;
+  --accent: lightseagreen;
+  --focus: #4a8aa1;
+  --visited: violet;
+  --border-color: #222222;
+}
+
+/* Valiables - Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-body: #222222;
+    --background-alt: #222222;
+    --text-strong: #eeeeee;
+    --text-main: rgb(205, 205, 205);
+    --text-muted: #888888;
+    --text-hover: #eeeeee;
+    --accent: lightseagreen;
+    --focus: #4a8aa1;
+    --visited: violet;
+    --border-color: rgb(205, 205, 205);
+  }
+}
+
+/* Whole Page */
+.container {
+  margin: auto;
+  background-color: var(--background-body);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Site Tittle */
+header {
+  background-color: var(--background-alt);
+  .site-title {
+    padding-left: 1rem;
+    font-size: 2rem;
+    max-width: max-content;
+    min-width: min-content;
+    color: var(--text-menu);
+    font-weight: 700;
+    text-decoration: none;
+    &:hover {
+      color: var(--text-hover);
+    }
+  }
+}
+
+/* Navigation Bar Design */
+.nav-bar {
+  background-color: var(--background-alt);
+  border: solid;
+  /* Tablet Design */
+  @media (max-width: 500px) {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    .nav-link-item {
+      padding-right: 1rem;
+      padding-left: 1rem;
+      margin-bottom: 0;
+      .nav-link-text {
+        color: var(--text-menu);
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Contents Design */
+
+main {
+  flex: 1;
+  border: solid;
+  padding-left: 1rem;
+  .heading {
+    color: var(--text-strong);
+    margin-bottom: 0;
+    padding-top: 1rem;
+  }
+  p {
+    color: var(--text-main);
+  }
+  h2 {
+    color: var(--text-main);
+  }
+}
+
+.link-title {
+  color: #03d069;
+  &:hover {
+    color: var(--text-hover);
+  }
+}
+/* Footer Design */
+
+.footer-bar {
+  background-color: var(--background-alt);
+  padding: auto;
+  margin: 0;
+  border-top: solid var(--border-color);
+  .footer-title {
+    font-size: 0.5em;
+    color: var(--text-menu);
+    text-align: center;
+    margin: 0;
+  }
+}

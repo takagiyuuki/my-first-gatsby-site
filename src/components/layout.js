@@ -10,7 +10,8 @@ import {
   siteTitle,
   footerTitle,
   footerBar,
-} from "./layout.module.css";
+} from "./layout.module.scss";
+
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -62,7 +63,7 @@ const Layout = ({ pageTitle, children }) => {
         {children}
       </main>
       <footer className={footerBar}>
-        <p className={footerTitle}>Takagi Yuki © 2023 -</p>
+        <p className={footerTitle}>© Takagi Yuki</p>
       </footer>
     </div>
   );
