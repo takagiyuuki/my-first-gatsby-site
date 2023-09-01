@@ -29,42 +29,29 @@
   }
 }
 
-/* Whole Page */
-.container {
-  margin: auto;
-  background-color: var(--background-body);
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Site Tittle */
+/* Logo & Header & Navigation bar */
 .head-container {
+  background-color: var(--background-alt);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 10000;
 }
 
-header {
-  background-color: var(--background-alt);
-  .site-title {
-    padding-left: 1rem;
-    font-size: 2rem;
-    max-width: max-content;
-    min-width: min-content;
-    color: var(--text-menu);
-    font-weight: 700;
-    text-decoration: none;
-    &:hover {
-      color: var(--text-hover);
-    }
+.site-title {
+  padding-left: 1rem;
+  font-size: 2rem;
+  max-width: max-content;
+  min-width: min-content;
+  color: var(--text-menu);
+  font-weight: 700;
+  text-decoration: none;
+  &:hover {
+    color: var(--text-hover);
   }
 }
 
-/* Navigation Bar Design */
 .nav-bar {
-  background-color: var(--background-alt);
   border: solid;
   /* Tablet Design */
   @media (max-width: 500px) {
@@ -92,8 +79,16 @@ header {
   }
 }
 
-/* Contents Design */
+/* Whole Page */
+.container {
+  margin: auto;
+  background-color: var(--background-body);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
+/* Contents Design */
 main {
   flex: 1;
   padding-left: 1rem;
