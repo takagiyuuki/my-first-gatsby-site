@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Seo } from "../components/seo";
-import { bodyImage, bodyText, bodyFlex } from "../styles/homepage.module.scss";
+import { bodyImage, bodyText, bodyFlex } from "../styles/content.module.scss";
 
 const IndexPage = () => {
   return (

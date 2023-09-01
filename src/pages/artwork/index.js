@@ -2,6 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
+import { linkTitle } from "../../styles/content.module.scss";
 
 const ArtworkPage = ({ data }) => {
   return (
@@ -16,6 +17,7 @@ const ArtworkPage = ({ data }) => {
                 color: "#cdcdcd",
                 textShadow: "1px 1px 0 ##eeeeee",
               }}
+              className={linkTitle}
             >
               {node.frontmatter.title}
             </Link>
