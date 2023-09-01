@@ -29,6 +29,11 @@
   }
 }
 
+/* Whole Page */
+.container {
+  min-height: 100%;
+}
+
 /* Logo & Header & Navigation bar */
 .head-container {
   background-color: var(--background-alt);
@@ -79,16 +84,12 @@
   }
 }
 
-/* Whole Page */
-.container {
+/* Contents Design */
+.body-container {
   margin: auto;
   background-color: var(--background-body);
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Contents Design */
 main {
   flex: 1;
   padding-left: 1rem;
@@ -113,6 +114,9 @@ main {
 
 /* Footer Design */
 .footer-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: var(--background);
   padding: auto;
   margin: 0;
