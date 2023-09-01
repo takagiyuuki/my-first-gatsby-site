@@ -31,7 +31,7 @@
 
 /* Whole Page */
 .container {
-  min-height: 100%;
+  /* min-height: 100%; */
 }
 
 /* Logo & Header & Navigation bar */
@@ -109,8 +109,8 @@ main {
 
 /* Footer Design */
 .footer-bar {
-  padding: auto;
   margin: 0;
+  padding: 0;
   margin-top: 2rem;
   border: var(--border-color-alt);
   border-top: solid;
