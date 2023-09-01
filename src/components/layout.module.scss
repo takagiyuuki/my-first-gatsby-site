@@ -39,6 +39,13 @@
 }
 
 /* Site Tittle */
+.head-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}
+
 header {
   background-color: var(--background-alt);
   .site-title {
@@ -90,10 +97,10 @@ header {
 main {
   flex: 1;
   padding-left: 1rem;
+  padding-top: 1rem;
   .heading {
     color: var(--text-strong);
     margin-bottom: 0;
-    padding-top: 1rem;
   }
   p {
     color: var(--text-main);
