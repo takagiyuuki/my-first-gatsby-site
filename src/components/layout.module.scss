@@ -86,30 +86,29 @@
 
 /* Contents Design */
 .body-container {
-  margin: auto;
   background-color: var(--background-body);
+}
+
+main {
+  margin: auto;
   padding-left: 1rem;
   padding-top: 1rem;
-}
-main {
   .heading {
     color: var(--text-strong);
     margin-bottom: 0;
   }
   p {
     color: var(--text-main);
+    margin-bottom: 0;
   }
   h2 {
     color: var(--text-main);
+    margin-bottom: 0;
   }
 }
 
 /* Footer Design */
 .footer-bar {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color: var(--background);
   padding: auto;
   margin: 0;
   margin-top: 2rem;
