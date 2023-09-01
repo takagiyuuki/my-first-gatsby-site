@@ -31,33 +31,32 @@
 
 /* Whole Page */
 .container {
-  margin: auto;
-  background-color: var(--background-body);
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Site Tittle */
-header {
+/* Logo & Header & Navigation bar */
+.head-container {
   background-color: var(--background-alt);
-  .site-title {
-    padding-left: 1rem;
-    font-size: 2rem;
-    max-width: max-content;
-    min-width: min-content;
-    color: var(--text-menu);
-    font-weight: 700;
-    text-decoration: none;
-    &:hover {
-      color: var(--text-hover);
-    }
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}
+
+.site-title {
+  padding-left: 1rem;
+  font-size: 2rem;
+  max-width: max-content;
+  min-width: min-content;
+  color: var(--text-menu);
+  font-weight: 700;
+  text-decoration: none;
+  &:hover {
+    color: var(--text-hover);
   }
 }
 
-/* Navigation Bar Design */
 .nav-bar {
-  background-color: var(--background-alt);
   border: solid;
   /* Tablet Design */
   @media (max-width: 500px) {
@@ -86,14 +85,18 @@ header {
 }
 
 /* Contents Design */
+.body-container {
+  margin: auto;
+  background-color: var(--background-body);
+}
 
 main {
   flex: 1;
   padding-left: 1rem;
+  padding-top: 1rem;
   .heading {
     color: var(--text-strong);
     margin-bottom: 0;
-    padding-top: 1rem;
   }
   p {
     color: var(--text-main);
@@ -111,6 +114,9 @@ main {
 
 /* Footer Design */
 .footer-bar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: var(--background);
   padding: auto;
   margin: 0;
