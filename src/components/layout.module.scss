@@ -88,12 +88,10 @@
 .body-container {
   margin: auto;
   background-color: var(--background-body);
-}
-
-main {
-  flex: 1;
   padding-left: 1rem;
   padding-top: 1rem;
+}
+main {
   .heading {
     color: var(--text-strong);
     margin-bottom: 0;
@@ -103,12 +101,6 @@ main {
   }
   h2 {
     color: var(--text-main);
-  }
-}
-.link-title {
-  color: #03d069;
-  &:hover {
-    color: var(--text-hover);
   }
 }
 

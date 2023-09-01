@@ -1,3 +1,4 @@
+/* index Page */
 .body-flex {
   display: flex;
   .body-image {
@@ -11,6 +12,10 @@
   }
 }
 
-
-
-
+/* Artwork Page */
+.link-title {
+  color: #03d069;
+  &:hover {
+    color: var(--text-hover);
+  }
+}
