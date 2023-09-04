@@ -1,4 +1,5 @@
 import * as React from "react";
+import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
@@ -12,6 +13,9 @@ import {
   siteTitle,
   footerBar,
   footerTitle,
+  logoLink,
+  logoImgBlack,
+  logoImgWhite,
 } from "./layout.module.scss";
 
 const Layout = ({ pageTitle, children }) => {
@@ -45,7 +49,10 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className={navLinkItem}>
-              <Link to="https://notion-blog-8kd.pages.dev" className={navLinkText}>
+              <Link
+                to="https://notion-blog-8kd.pages.dev"
+                className={navLinkText}
+              >
                 Blog
               </Link>
             </li>
@@ -69,6 +76,22 @@ const Layout = ({ pageTitle, children }) => {
         </main>
         <footer className={footerBar}>
           <p className={footerTitle}>© Takagi Yuki</p>
+          <a
+            href="https://github.com/takagiyuuki"
+            target="_blank"
+            className={logoLink}
+          >
+            <StaticImage
+              alt="Github Link"
+              src="../images/github-mark.svg"
+              class={logoImgBlack}
+            />
+            <StaticImage
+              alt="Github Link"
+              src="../images/github-mark-white.svg"
+              class={logoImgWhite}
+            />
+          </a>
         </footer>
       </div>
     </div>
