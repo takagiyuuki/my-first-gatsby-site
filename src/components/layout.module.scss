@@ -1,6 +1,7 @@
 /* Valiables - Light Mode */
 :root {
-  --background-body: #03d069;
+  // --background-body: #03d069;
+  --background-body: rgb(205, 205, 205);
   --background-alt: #222222;
   --text-menu: rgb(205, 205, 205);
   --text-strong: #222222;
@@ -31,7 +32,7 @@
 
 /* Whole Page */
 .container {
-  /* min-height: 100%; */
+  min-height: 100%;
 }
 
 /* Logo & Header & Navigation bar */
@@ -87,6 +88,7 @@
 /* Contents Design */
 .body-container {
   background-color: var(--background-body);
+  margin-top: 80px;
 }
 
 main {
@@ -118,7 +120,7 @@ main {
   .footer-title {
     font-size: 0.5em;
     color: var(--text-main);
-    text-align: left;
+    text-align: center;
     padding-left: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;

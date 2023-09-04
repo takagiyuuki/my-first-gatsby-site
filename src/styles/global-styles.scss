@@ -28,29 +28,3 @@
     --border-color: rgb(205, 205, 205);
   }
 }
-
-/* index Page */
-.body-flex {
-  display: flex;
-  .body-image {
-    width: 40%;
-    margin-right: 2rem;
-  }
-  .body-text {
-    h2 {
-      font-weight: bold;
-    }
-    p {
-      margin: auto;
-      padding: 0;
-    }
-  }
-}
-
-/* Artwork Page */
-.link-title {
-  color: var(--text-menu);
-  &:hover {
-    color: var(--text-hover);
-  }
-}
