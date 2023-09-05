@@ -1,0 +1,31 @@
+/* Valiables - Light Mode */
+:root {
+  --background-body: #eeeeee;
+  // --background-body: #03d069;
+  --background-alt: #222222;
+  --text-menu: rgb(205, 205, 205);
+  --text-strong: #222222;
+  --text-main: #444444;
+  --text-muted: #888888;
+  --text-hover: #eeeeee;
+  --accent: lightseagreen;
+  --focus: #4a8aa1;
+  --visited: violet;
+  --border-color: #222222;
+}
+
+/* Valiables - Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-body: #222222;
+    --background-alt: #222222;
+    --text-strong: #eeeeee;
+    --text-main: rgb(205, 205, 205);
+    --text-muted: #888888;
+    --text-hover: #eeeeee;
+    --accent: lightseagreen;
+    --focus: #4a8aa1;
+    --visited: violet;
+    --border-color: rgb(205, 205, 205);
+  }
+}

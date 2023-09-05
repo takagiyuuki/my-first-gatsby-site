@@ -2,19 +2,24 @@
 .body-flex {
   display: flex;
   .body-image {
-  width: 40%;
-  margin-right: 2rem;
+    width: 40%;
+    margin-right: 2rem;
   }
   .body-text {
     h2 {
-      fontweight: bold;
+      font-weight: bold;
+    }
+    p {
+      margin: auto;
+      padding: 0;
     }
   }
 }
 
 /* Artwork Page */
 .link-title {
-  color: #03d069;
+  text-decoration: none;
+  color: var(--text-menu);
   &:hover {
     color: var(--text-hover);
   }
