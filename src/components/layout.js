@@ -49,12 +49,14 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className={navLinkItem}>
-              <Link
-                to="https://notion-blog-8kd.pages.dev"
+              <a
+                href="https://notion-blog-8kd.pages.dev"
+                rel="external"
+                alt="My Blog"
                 className={navLinkText}
               >
                 Blog
-              </Link>
+              </a>
             </li>
             <li className={navLinkItem}>
               <Link to="/services" className={navLinkText}>
@@ -79,6 +81,7 @@ const Layout = ({ pageTitle, children }) => {
           <a
             href="https://github.com/takagiyuuki"
             target="_blank"
+            rel="noreferrer"
             className={logoLink}
           >
             <StaticImage
