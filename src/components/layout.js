@@ -3,19 +3,19 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
-  headContainer,
-  bodyContainer,
-  heading,
-  navBar,
-  navLinks,
-  navLinkItem,
-  navLinkText,
+  header,
   siteTitle,
-  footerBar,
+  navBar,
+  navLink,
+  navLinkItem,
+  navLinkItemText,
+  main,
+  mainHeading,
+  footer,
   footerTitle,
-  logoLink,
-  logoImgBlack,
-  logoImgWhite,
+  footerLogoGithub,
+  footerLogoGithubBlack,
+  footerLogoGithubWhite,
 } from "./layout.module.scss";
 
 const Layout = ({ pageTitle, children }) => {
@@ -30,21 +30,19 @@ const Layout = ({ pageTitle, children }) => {
   `);
   return (
     <div className={container}>
-      <div className={headContainer}>
-        <header>
-          <Link to="/" className={siteTitle}>
-            {data.site.siteMetadata.title}
-          </Link>
-        </header>
+      <header className={header}>
+        <Link to="/" className={siteTitle}>
+          {data.site.siteMetadata.title}
+        </Link>
         <nav className={navBar}>
-          <ul className={navLinks}>
+          <ul className={navLink}>
             <li className={navLinkItem}>
-              <Link to="/about" className={navLinkText}>
+              <Link to="/about" className={navLinkItemText}>
                 About
               </Link>
             </li>
             <li className={navLinkItem}>
-              <Link to="/contact" className={navLinkText}>
+              <Link to="/contact" className={navLinkItemText}>
                 Contact
               </Link>
             </li>
@@ -53,50 +51,48 @@ const Layout = ({ pageTitle, children }) => {
                 href="https://notion-blog-8kd.pages.dev"
                 rel="external"
                 alt="My Blog"
-                className={navLinkText}
+                className={navLinkItemText}
               >
                 Blog
               </a>
             </li>
             <li className={navLinkItem}>
-              <Link to="/services" className={navLinkText}>
+              <Link to="/services" className={navLinkItemText}>
                 Services
               </Link>
             </li>
             <li className={navLinkItem}>
-              <Link to="/artwork" className={navLinkText}>
+              <Link to="/artwork" className={navLinkItemText}>
                 Artwork
               </Link>
             </li>
           </ul>
         </nav>
-      </div>
-      <div className={bodyContainer}>
-        <main>
-          <h1 className={heading}>{pageTitle}</h1>
-          {children}
-        </main>
-        <footer className={footerBar}>
-          <p className={footerTitle}>© Takagi Yuki</p>
-          <a
-            href="https://github.com/takagiyuuki"
-            target="_blank"
-            rel="noreferrer"
-            className={logoLink}
-          >
-            <StaticImage
-              alt="Github Link"
-              src="../images/github-mark.svg"
-              class={logoImgBlack}
-            />
-            <StaticImage
-              alt="Github Link"
-              src="../images/github-mark-white.svg"
-              class={logoImgWhite}
-            />
-          </a>
-        </footer>
-      </div>
+      </header>
+      <main className={main}>
+        <h1 className={mainHeading}>{pageTitle}</h1>
+        {children}
+      </main>
+      <footer className={footer}>
+        <p className={footerTitle}>© Takagi Yuki</p>
+        <a
+          href="https://github.com/takagiyuuki"
+          target="_blank"
+          rel="noreferrer"
+          className={footerLogoGithub}
+        >
+          <StaticImage
+            alt="Github Link"
+            src="../images/github-mark.svg"
+            class={footerLogoGithubBlack}
+          />
+          <StaticImage
+            alt="Github Link"
+            src="../images/github-mark-white.svg"
+            class={footerLogoGithubWhite}
+          />
+        </a>
+      </footer>
     </div>
   );
 };
