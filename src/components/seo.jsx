@@ -29,10 +29,15 @@ export const Seo = ({ title, description, pathname, children }) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
       <meta name="twitter:creator" content={seo.twitterUsername} />
-      <link
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta name="og:title" content={seo.title} />
+      <meta name="og:description" content={seo.description} />
+      <meta name="og:type" content="website" />
+      <meta name="og:image" content={seo.image} />
+      {/* <link
         rel="icon"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>"
-      />
+      /> */}
       {children}
     </>
   );

@@ -20,6 +20,9 @@
 .link-title {
   text-decoration: none;
   color: var(--text-menu);
+  &:visited {
+    color: var(--visited);
+  }
   &:hover {
     color: var(--text-hover);
   }
