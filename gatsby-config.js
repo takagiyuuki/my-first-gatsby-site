@@ -11,9 +11,9 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Portfolio website`, 
+        name: `Portfolio website`,
         short_name: `Portfolio website`, //nameが入りきらない時のアプリ名
         start_url: `/`,
         background_color: `rgb(219, 219, 219)`, //アプリとして起動した時の背景色
@@ -23,7 +23,8 @@ module.exports = {
         icon_options: {
           purpose: `any maskable`,
         },
-        icons: [ //↓詳細は下
+        icons: [
+          //↓詳細は下
           {
             src: `${__dirname}/src/images/github-mark.svg`,
             sizes: `512x512`,
