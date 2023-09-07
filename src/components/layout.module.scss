@@ -2,20 +2,20 @@
 
 /* Whole Page */
 .container {
-  background-color: $background-body;
+  background-color: global.$background-body;
   min-height: 100%;
 }
 
 /* Logo & Header & Navigation bar */
 .header {
-  background-color: $background-alt;
+  background-color: global.$background-alt;
   position: fixed;
   top: 0;
   width: 100%;
   height: 60px;
   z-index: 10000;
   .site-title {
-    color: $text-menu;
+    color: global.$text-menu;
     text-decoration: none;
     padding: 0;
     padding-left: 1rem;
@@ -25,7 +25,7 @@
     font-weight: 700;
     margin: 0;
     &:hover {
-      color: $text-hover;
+      color: global.$text-hover;
     }
   }
   .nav-bar {
@@ -45,12 +45,12 @@
         &-text {
           margin: 0;
           padding: 0;
-          color: $text-menu;
+          color: global.$text-menu;
           font-size: 10px;
           font-weight: bold;
           text-decoration: none;
           &:hover {
-            color: $text-hover;
+            color: global.$text-hover;
           }
         }
       }
@@ -60,13 +60,13 @@
 
 /* Contents Design */
 .main {
-  color: $text-main;
+  color: global.$text-main;
   margin: auto;
   margin-bottom: 0;
   padding-left: 1rem;
   padding-top: 90px;
   &-heading {
-    color: $text-strong;
+    color: global.$text-strong;
   }
 }
 

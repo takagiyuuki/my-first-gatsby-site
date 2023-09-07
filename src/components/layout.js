@@ -1,22 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import {
-  container,
-  header,
-  siteTitle,
-  navBar,
-  navLink,
-  navLinkItem,
-  navLinkItemText,
-  main,
-  mainHeading,
-  footer,
-  footerTitle,
-  footerLogoGithub,
-  footerLogoGithubBlack,
-  footerLogoGithubWhite,
-} from "./layout.module.scss";
+import styles from "./layout.module.scss";
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -29,57 +14,57 @@ const Layout = ({ pageTitle, children }) => {
     }
   `);
   return (
-    <div className={container}>
-      <header className={header}>
-        <Link to="/" className={siteTitle}>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <Link to="/" className={styles.siteTitle}>
           {data.site.siteMetadata.title}
         </Link>
-        <nav className={navBar}>
-          <ul className={navLink}>
-            <li className={navLinkItem}>
-              <Link to="/about" className={navLinkItemText}>
+        <nav className={styles.navBar}>
+          <ul className={styles.navLink}>
+            <li className={styles.navLinkItem}>
+              <Link to="/about" className={styles.navLinkItemText}>
                 About
               </Link>
             </li>
-            <li className={navLinkItem}>
-              <Link to="/contact" className={navLinkItemText}>
+            <li className={styles.navLinkItem}>
+              <Link to="/contact" className={styles.navLinkItemText}>
                 Contact
               </Link>
             </li>
-            <li className={navLinkItem}>
+            <li className={styles.navLinkItem}>
               <a
                 href="https://notion-blog-8kd.pages.dev"
                 rel="external"
                 alt="My Blog"
-                className={navLinkItemText}
+                className={styles.navLinkItemText}
               >
                 Blog
               </a>
             </li>
-            <li className={navLinkItem}>
-              <Link to="/services" className={navLinkItemText}>
+            <li className={styles.navLinkItem}>
+              <Link to="/services" className={styles.navLinkItemText}>
                 Services
               </Link>
             </li>
-            <li className={navLinkItem}>
-              <Link to="/artwork" className={navLinkItemText}>
+            <li className={styles.navLinkItem}>
+              <Link to="/artwork" className={styles.navLinkItemText}>
                 Artwork
               </Link>
             </li>
           </ul>
         </nav>
       </header>
-      <main className={main}>
-        <h1 className={mainHeading}>{pageTitle}</h1>
+      <main className={styles.main}>
+        <h1 className={styles.mainHeading}>{pageTitle}</h1>
         {children}
       </main>
-      <footer className={footer}>
-        <p className={footerTitle}>© Takagi Yuki</p>
+      <footer className={styles.footer}>
+        <p className={styles.footerTitle}>© Takagi Yuki</p>
         <a
           href="https://github.com/takagiyuuki"
           target="_blank"
           rel="noreferrer"
-          className={footerLogoGithub}
+          className={styles.footerLogoGithub}
         >
           <StaticImage
             alt="Github Link"

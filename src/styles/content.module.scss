@@ -17,15 +17,14 @@
     }
   }
 }
-
 /* Artwork Page */
 .link-title {
   text-decoration: none;
-  color: $text-menu;
+  color: global.$text-menu;
   &:visited {
-    color: $visited;
+    color: global.$visited;
   }
   &:hover {
-    color: $text-hover;
+    color: global.$text-hover;
   }
 }
