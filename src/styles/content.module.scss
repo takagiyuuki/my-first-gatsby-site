@@ -1,3 +1,5 @@
+@use "./global";
+
 /* index Page */
 .body-flex {
   display: flex;
@@ -19,11 +21,11 @@
 /* Artwork Page */
 .link-title {
   text-decoration: none;
-  color: var(--text-menu);
+  color: $text-menu;
   &:visited {
-    color: var(--visited);
+    color: $visited;
   }
   &:hover {
-    color: var(--text-hover);
+    color: $text-hover;
   }
 }
