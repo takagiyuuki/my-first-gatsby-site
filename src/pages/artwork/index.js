@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
 import { Seo } from "../../components/seo";
-import { linkTitle } from "../../styles/content.module.scss";
+import * as styles from "../../styles/content.module.scss";
 
 const ArtworkPage = ({ data }) => {
   return (
@@ -12,7 +12,7 @@ const ArtworkPage = ({ data }) => {
           <h2>
             <Link
               to={`/artwork/${node.frontmatter.slug}`}
-              className={linkTitle}
+              className={styles.linkTitle}
             >
               {node.frontmatter.title}
             </Link>

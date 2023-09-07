@@ -4,41 +4,73 @@
 module.exports = {
   siteMetadata: {
     title: `Portfolio website`,
+    author: {
+      name: `Yuuki`,
+      summary: `Software developer`,
+    },
     description: `Example project for the Gatsby Head API`,
     twitterUsername: `@yuukimizuiro`,
-    siteUrl: `https://www.yourdomain.com`,
-    image: `/gatsby-icon.png`,
+    siteUrl: `https://portfolio-azi.pages.dev`,
+    image: `src/images/github-mark.svg`,
+    supportedLanguages: ["en", "ja"],
+    defaultLanguage: "en",
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-manifest`
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Portfolio website`, 
-        short_name: `Portfolio website`, //nameが入りきらない時のアプリ名
+        name: `Portfolio website`,
+        short_name: `My App`,
+        description: `Example project for the Gatsby Head API`,
+        lang: `en`,
+        display: `minimal-ui`,
         start_url: `/`,
-        background_color: `rgb(219, 219, 219)`, //アプリとして起動した時の背景色
-        theme_color: `#51a44c`, //ツールバーの色
-        display: `minimal-ui`, //↓詳細は下。
-        icon: `${__dirname}/src/images/whitebacklogo.jpg`, //アイコン画像。これがファビコンにもなる。詳細は下。
+        background_color: `rgb(219, 219, 219)`,
+        theme_color: `#51a44c`,
+        theme_color_in_head: false,
+        icon: `${__dirname}/src/images/github-mark.svg`,
         icon_options: {
           purpose: `any maskable`,
         },
-        icons: [ //↓詳細は下
+        icons: [
           {
             src: `${__dirname}/src/images/github-mark.svg`,
             sizes: `512x512`,
-            type: `image/png`,
+            type: `svg`,
           },
           {
             src: `${__dirname}/src/images/github-mark-white.svg`,
             sizes: `256x256`,
-            type: `image/png`,
+            type: `svg`,
+          },
+        ],
+        cache_busting_mode: `none`,
+        localize: [
+          {
+            start_url: `/ja/`,
+            lang: `ja`,
+            name: `ポートフォリオ`,
+            short_name: `マイポ`,
+            description: `ブランディングサイトです`,
           },
         ],
       },
     },
-    // Seo Meta tag plugin
-    // "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          globPatterns: [`**/icon-path*`],
+        },
+      },
+    },
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
