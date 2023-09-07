@@ -16,6 +16,8 @@ module.exports = {
     twitterUsername: `@yuukimizuiro`,
     siteUrl: `{$siteUrl}`,
     image: `/src/images/github-mark.svg`,
+    supportedLanguages: ["en", "ja"],
+    defaultLanguage: "en",
   },
   plugins: [
     {
