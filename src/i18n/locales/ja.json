@@ -1,3 +1,6 @@
 {
-  "blog": "ブログ"
+  "topPage": {
+    "pageTitle": "ホームページ",
+    "greeting": "よい1日を"
+  }
 }

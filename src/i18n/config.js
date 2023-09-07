@@ -1,26 +1,29 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var i18next_1 = require("i18next");
-i18next_1.default.init({
-    fallbackLng: "en",
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import Backend from "i18next-http-backend";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+i18n
+  .use(Backend)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
     resources: {
-        ja: {
-            translations: require("./locales/ja.json"),
-        },
-        en: {
-            translations: require("./locales/en.json"),
-        },
+      en: {
+        translation: require("./locales/en.json"),
+      },
+      de: {
+        translation: require("./locales/de.json"),
+      },
+      ja: {
+        translation: require("./locales/ja.json"),
+      },
     },
-    ns: ["translations"],
-    defaultNS: "translations",
-    returnObjects: true,
     debug: process.env.NODE_ENV === "development",
+    fallbackLng: "en",
     interpolation: {
-        escapeValue: false, // not needed for react!!
+      escapeValue: false,
     },
-    react: {
-        wait: true,
-    },
-});
-i18next_1.default.languages = ["ja", "en"];
-exports.default = i18next_1.default;
+  });
+
+export default i18n;

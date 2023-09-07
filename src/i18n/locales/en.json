@@ -1,3 +1,6 @@
 {
-  "blog": "Blog"
+  "topPage": {
+    "pageTitle": "Home Page",
+    "greeting": "Have a nice day"
+  }
 }

@@ -1,10 +1,6 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-
-const siteName = `Yuuki Portfolio`;
-const siteUrl = `https://portfolio-azi.pages.dev/`;
-
 module.exports = {
   siteMetadata: {
     title: `Portfolio website`,
@@ -14,7 +10,7 @@ module.exports = {
     },
     description: `Example project for the Gatsby Head API`,
     twitterUsername: `@yuukimizuiro`,
-    siteUrl: `{$siteUrl}`,
+    siteUrl: `https://portfolio-azi.pages.dev`,
     image: `/src/images/github-mark.svg`,
     supportedLanguages: ["en", "ja"],
     defaultLanguage: "en",
