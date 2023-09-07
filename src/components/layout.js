@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import styles from "./layout.module.scss";
+import * as styles from "./layout.module.scss";
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -69,12 +69,12 @@ const Layout = ({ pageTitle, children }) => {
           <StaticImage
             alt="Github Link"
             src="../images/github-mark.svg"
-            class={footerLogoGithubBlack}
+            className={styles.footerLogoGithubBlack}
           />
           <StaticImage
             alt="Github Link"
             src="../images/github-mark-white.svg"
-            class={footerLogoGithubWhite}
+            className={styles.footerLogoGithubWhite}
           />
         </a>
       </footer>

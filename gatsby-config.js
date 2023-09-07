@@ -11,7 +11,7 @@ module.exports = {
     description: `Example project for the Gatsby Head API`,
     twitterUsername: `@yuukimizuiro`,
     siteUrl: `https://portfolio-azi.pages.dev`,
-    image: `/src/images/github-mark.svg`,
+    image: `src/images/github-mark.svg`,
     supportedLanguages: ["en", "ja"],
     defaultLanguage: "en",
   },
