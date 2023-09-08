@@ -1,6 +1,8 @@
 {
-  "topPage": {
-    "pageTitle": "Home Page",
-    "greeting": "Have a nice day"
-  }
+  "About": "About",
+  "Contact": "Contact",
+  "Blog": "Blog",
+  "Services": "Services",
+  "Artwork": "Artwork",
+  "greeting": "Hi!"
 }

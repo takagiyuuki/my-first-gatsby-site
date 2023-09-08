@@ -1,6 +1,8 @@
 {
-  "topPage": {
-    "pageTitle": "ホームページ",
-    "greeting": "よい1日を"
-  }
+  "About": "概要",
+  "Contact": "アドレス",
+  "Blog": "ブログ",
+  "Services": "サービス",
+  "Artwork": "アートワーク",
+  "greeting": "こんにちは"
 }

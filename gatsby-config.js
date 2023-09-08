@@ -1,6 +1,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+const mySiteUrl = `https://portfolio-azi.pages.dev`;
+
 module.exports = {
   siteMetadata: {
     title: `Portfolio website`,
@@ -10,7 +12,7 @@ module.exports = {
     },
     description: `Example project for the Gatsby Head API`,
     twitterUsername: `@yuukimizuiro`,
-    siteUrl: `https://portfolio-azi.pages.dev`,
+    siteUrl: mySiteUrl,
     image: `src/images/github-mark.svg`,
     supportedLanguages: ["en", "ja"],
     defaultLanguage: "en",
@@ -45,15 +47,15 @@ module.exports = {
           },
         ],
         cache_busting_mode: `none`,
-        localize: [
-          {
-            start_url: `/ja/`,
-            lang: `ja`,
-            name: `ポートフォリオ`,
-            short_name: `マイポ`,
-            description: `ブランディングサイトです`,
-          },
-        ],
+        // localize: [
+        //   {
+        //     start_url: `/ja/`,
+        //     lang: `ja`,
+        //     name: `ポートフォリオ`,
+        //     short_name: `マイポ`,
+        //     description: `ブランディングサイトです`,
+        //   },
+        // ],
       },
     },
     {
@@ -89,10 +91,48 @@ module.exports = {
         path: `${__dirname}/artwork`,
       },
     },
+    // Add i18n function with gatsby-plugin-react-i18next
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
+        path: `${__dirname}/src/i18n/locales`,
+      },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        languages: [`en`, `es`, `de`, `ja`],
+        defaultLanguage: `en`,
+        siteUrl: mySiteUrl,
+        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+        trailingSlash: "always",
+        // you can pass any i18next options
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+        pages: [
+          {
+            matchPath: "/:lang?/blog/:uid",
+            getLanguageFromPath: true,
+            excludeLanguages: ["es"],
+          },
+          {
+            matchPath: "/preview",
+            languages: ["en"],
+          },
+        ],
       },
     },
   ],

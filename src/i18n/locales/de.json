@@ -1,6 +1,8 @@
 {
-  "topPage": {
-    "pageTitle": "Nertherland",
-    "greeting": "Schönen tag noch"
-  }
+  "About": "Over",
+  "Contact": "Contact",
+  "Blog": "Blog",
+  "Services": "Diensten",
+  "Artwork": "Kunst",
+  "greeting": "Hoi!"
 }

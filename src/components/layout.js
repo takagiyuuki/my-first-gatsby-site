@@ -1,9 +1,12 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby"; // delete Link compornent
 import * as styles from "./layout.module.scss";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Layout = ({ pageTitle, children }) => {
+  const { t } = useTranslation();
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -23,12 +26,12 @@ const Layout = ({ pageTitle, children }) => {
           <ul className={styles.navLink}>
             <li className={styles.navLinkItem}>
               <Link to="/about" className={styles.navLinkItemText}>
-                About
+                <Trans>About</Trans>
               </Link>
             </li>
             <li className={styles.navLinkItem}>
               <Link to="/contact" className={styles.navLinkItemText}>
-                Contact
+                <Trans>Contact</Trans>
               </Link>
             </li>
             <li className={styles.navLinkItem}>
@@ -38,7 +41,7 @@ const Layout = ({ pageTitle, children }) => {
                 alt="My Blog"
                 className={styles.navLinkItemText}
               >
-                Blog
+                <Trans>Blog</Trans>
               </a>
             </li>
             <li className={styles.navLinkItem}>
@@ -48,7 +51,7 @@ const Layout = ({ pageTitle, children }) => {
             </li>
             <li className={styles.navLinkItem}>
               <Link to="/artwork" className={styles.navLinkItemText}>
-                Artwork
+                <Trans>Artwork</Trans>
               </Link>
             </li>
           </ul>
@@ -83,3 +86,17 @@ const Layout = ({ pageTitle, children }) => {
 };
 
 export default Layout;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

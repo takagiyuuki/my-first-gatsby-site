@@ -3,16 +3,18 @@ import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import { Seo } from "../components/seo";
 import styles from "../styles/content.module.scss";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const IndexPage = () => {
-  const { t, i18n } = useTranslation();
-  const changeLang = (lang) => {
-    i18n.changeLanguage(lang);
-  };
+  // const { t, i18n } = useTranslation();
+  // const changeLang = (lang) => {
+  //   i18n.changeLanguage(lang);
+  // };
+  const { t } = useTranslation();
 
   return (
-    <Layout pageTitle={t("topPage.greeting")}>
+    <Layout pageTitle={t("greeting")}>
       <p>I'm making this by following the Gatsby Tutorial.</p>
       <div className={styles.bodyFlex}>
         <StaticImage

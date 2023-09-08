@@ -7,53 +7,34 @@
   Gatsby Minimal Starter
 </h1>
 
-## 🚀 Quick start
+## Summay
 
-1.  **Create a Gatsby site.**
+This repository is dedicated to my portfolio website.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Overview
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+This website is built using Gatsby, a framework that allows for the easy creation of fast and modern web applications. It delivers outstanding performance and a smooth user experience.
 
-2.  **Start developing.**
+## Hosting
 
-    Navigate into your new site’s directory and start it up.
+This website is hosted using Cloudflare, which provides excellent services in terms of security, performance, and reliability, ensuring the availability of the website.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+## License
 
-3.  **Open the code and start customizing!**
+The code in this repository is provided under the MIT License, allowing for free use, modification, and redistribution. For more details, please refer to the [License file](LICENSE).
 
-    Your site is now running at http://localhost:8000!
+## Env
 
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
-
-
-## Setting | Cloudflare
-
-### Environment variables
+### Cloudflare
 
 |Variable name |Value|
 | --- | --- |
 |`NODE_VERSION`|`20.5.1`|
 |`NPM_VERSION`|`9.8.1`|
+
+## Contact
+
+If you have any questions or suggestions, feel free to [contact](mailto:youremail@example.com) us.
+
+---
+© 2023 Yuuki takagi
