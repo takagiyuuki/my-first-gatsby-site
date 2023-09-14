@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby"; // delete Link compornent
-import * as styles from "./layout.module.scss";
+import * as styles from "../styles/layout.module.scss";
 import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
 
 const Layout = ({ pageTitle, children }) => {
