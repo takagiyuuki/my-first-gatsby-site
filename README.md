@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal Starter
+  My Portfolio Website
 </h1>
 
 ## Summay
@@ -22,15 +22,6 @@ This website is hosted using Cloudflare, which provides excellent services in te
 ## License
 
 The code in this repository is provided under the MIT License, allowing for free use, modification, and redistribution. For more details, please refer to the [License file](LICENSE).
-
-## Env
-
-### Cloudflare
-
-|Variable name |Value|
-| --- | --- |
-|`NODE_VERSION`|`20.5.1`|
-|`NPM_VERSION`|`9.8.1`|
 
 ## Contact
 
