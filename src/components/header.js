@@ -1,7 +1,11 @@
 import * as React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import * as styles from "../styles/header.module.scss";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import {
+  Link,
+  Trans,
+  useTranslation,
+} from "@herob/gatsby-plugin-react-i18next";
 
 const Header = ( ) => {
   const { t } = useTranslation();
@@ -56,6 +60,3 @@ const Header = ( ) => {
     </header>
   );
 };
-
-export default Header;
-
