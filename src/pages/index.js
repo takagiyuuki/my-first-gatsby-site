@@ -4,7 +4,11 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Seo } from "../components/seo";
 import styles from "../styles/content.module.scss";
 // import { useTranslation } from "react-i18next";
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import {
+  Link,
+  Trans,
+  useTranslation,
+} from "@herob/gatsby-plugin-react-i18next";
 
 const IndexPage = () => {
   // const { t, i18n } = useTranslation();
@@ -26,7 +30,7 @@ const IndexPage = () => {
           <h2>Hi! I'm Yuki</h2>
           <p>Welcome My branding site.</p>
           <p>This website is my branding pages.</p>
-          <ul>
+          {/* <ul>
             <li>
               <button onClick={() => changeLang("en")}>EN</button>
             </li>
@@ -36,7 +40,7 @@ const IndexPage = () => {
             <li>
               <button onClick={() => changeLang("ja")}>JA</button>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </Layout>
