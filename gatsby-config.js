@@ -92,48 +92,48 @@ module.exports = {
       },
     },
     // Add i18n function with gatsby-plugin-react-i18next
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `locale`,
-        path: `${__dirname}/src/i18n/locales`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `locale`,
+    //     path: `${__dirname}/src/i18n/locales`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    {
-      resolve: `@herob/gatsby-plugin-react-i18next`,
-      options: {
-        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
-        languages: [`en`, `es`, `de`, `ja`],
-        defaultLanguage: `en`,
-        siteUrl: mySiteUrl,
-        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
-        trailingSlash: "always",
-        // you can pass any i18next options
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false, // not needed for react as it escapes by default
-          },
-          keySeparator: false,
-          nsSeparator: false,
-        },
-        pages: [
-          {
-            matchPath: "/:lang?/blog/:uid",
-            getLanguageFromPath: true,
-            excludeLanguages: ["es"],
-          },
-          {
-            matchPath: "/preview",
-            languages: ["en"],
-          },
-        ],
-      },
-    },
+    // {
+    //   resolve: `@herob/gatsby-plugin-react-i18next`,
+    //   options: {
+    //     localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+    //     languages: [`en`, `es`, `de`, `ja`],
+    //     defaultLanguage: `en`,
+    //     siteUrl: mySiteUrl,
+    //     // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+    //     trailingSlash: "always",
+    //     // you can pass any i18next options
+    //     i18nextOptions: {
+    //       interpolation: {
+    //         escapeValue: false, // not needed for react as it escapes by default
+    //       },
+    //       keySeparator: false,
+    //       nsSeparator: false,
+    //     },
+    //     pages: [
+    //       {
+    //         matchPath: "/:lang?/blog/:uid",
+    //         getLanguageFromPath: true,
+    //         excludeLanguages: ["es"],
+    //       },
+    //       {
+    //         matchPath: "/preview",
+    //         languages: ["en"],
+    //       },
+    //     ],
+    //   },
+    // },
   ],
 };

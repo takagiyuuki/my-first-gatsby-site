@@ -1,4 +1,3 @@
-// // import "./src/styles/global-styles.scss";
-// import { rootWrapper } from "./gatsby-wrapper";
+import { rootWrapper } from "./gatsby-wrapper";
 
-// export const wrapRootElement = rootWrapper;
+export const wrapRootElement = rootWrapper;
