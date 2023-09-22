@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../../components/layout";
+import { Layout } from "../../components/layout";
 import { Seo } from "../../components/seo";
 
 const Artworkpost = ({ data, children }) => {
@@ -24,5 +24,4 @@ export const query = graphql`
 `;
 
 export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />;
-
 export default Artworkpost;
