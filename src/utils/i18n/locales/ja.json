@@ -1,8 +1,13 @@
 {
-  "About": "概要",
-  "Contact": "アドレス",
-  "Blog": "ブログ",
-  "Services": "サービス",
-  "Artwork": "アートワーク",
-  "greeting": "こんにちは"
+  "navbar": {
+    "About": "概要",
+    "Contact": "アドレス",
+    "Blog": "ブログ",
+    "Services": "サービス",
+    "Artwork": "アートワーク"
+  },
+  "topPage": {
+    "greeting": "こんにちは",
+    "introText": "このWebサイトは私のポートフォリオサイトです。"
+  }
 }
