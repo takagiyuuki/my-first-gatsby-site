@@ -22,6 +22,7 @@
       color: global.$text-hover;
     }
   }
+
   .nav-bar {
     /* Tablet Design */
     @media (max-width: 500px) {
@@ -50,4 +51,11 @@
       }
     }
   }
+}
+
+.lang-buttons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
