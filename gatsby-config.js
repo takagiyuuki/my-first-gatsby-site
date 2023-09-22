@@ -30,20 +30,20 @@ module.exports = {
         background_color: `rgb(219, 219, 219)`,
         theme_color: `#51a44c`,
         theme_color_in_head: false,
-        icon: `${__dirname}/src/images/github-mark.svg`,
+        icon: `${__dirname}/src/images/icon.png`,
         icon_options: {
           purpose: `any maskable`,
         },
         icons: [
           {
-            src: `${__dirname}/src/images/github-mark.svg`,
+            src: `${__dirname}/src/images/icon.png`,
             sizes: `512x512`,
-            type: `svg`,
+            type: `png`,
           },
           {
-            src: `${__dirname}/src/images/github-mark-white.svg`,
+            src: `${__dirname}/src/images/icon.png`,
             sizes: `256x256`,
-            type: `svg`,
+            type: `ping`,
           },
         ],
         cache_busting_mode: `none`,
