@@ -1,0 +1,13 @@
+{
+  "navbar": {
+    "About": "Acerca de",
+    "Contact": "Contacto",
+    "Blog": "Blog",
+    "Services": "Servicios",
+    "Artwork": "Arte"
+  },
+  "topPage": {
+    "greeting": "Hola!",
+    "introText": "Welcome My branding site.I'm Yuki.This website is my branding pages."
+  }
+}

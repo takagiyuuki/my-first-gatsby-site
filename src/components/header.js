@@ -1,12 +1,14 @@
-import React from "react";
+import * as React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import * as styles from "../styles/header.module.scss";
+import { useTranslation } from "react-i18next";
 
-// Step 1: Import the useStaticQuery hook and graphql tag
-import { useStaticQuery, graphql } from "gatsby";
+export const Header = () => {
+  const { t, i18n } = useTranslation();
+  const changeLang = (lang) => {
+    i18n.changeLanguage(lang);
+  };
 
-const Header = () => {
-  /* Step 2: Use the useStaticQuery hook and
-    graphql tag to query for data
-    (The query gets run at build time) */
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,18 +16,61 @@ const Header = () => {
           title
         }
       }
-      siteBuildMetadata {
-        buildTime
-      }
     }
   `);
 
   return (
-    <header>
-      {/* Step 3: Use the data in your component */}
-      <h1>{data.site.siteMetadata.title}</h1>
+    <header className={styles.header}>
+      <Link to="/" className={styles.siteTitle}>
+        {data.site.siteMetadata.title}
+      </Link>
+      <div className={styles.langButtons}>
+        <ul>
+          <li>
+            <button onClick={() => changeLang("en")}>EN</button>
+          </li>
+          <li>
+            <button onClick={() => changeLang("de")}>DE</button>
+          </li>
+          <li>
+            <button onClick={() => changeLang("ja")}>JA</button>
+          </li>
+        </ul>
+      </div>
+      <nav className={styles.navBar}>
+        <ul className={styles.navLink}>
+          <li className={styles.navLinkItem}>
+            <Link to="/about" className={styles.navLinkItemText}>
+              {t("navbar.About")}
+            </Link>
+          </li>
+          <li className={styles.navLinkItem}>
+            <Link to="/contact" className={styles.navLinkItemText}>
+              {t("navbar.Contact")}
+            </Link>
+          </li>
+          <li className={styles.navLinkItem}>
+            <a
+              href="https://notion-blog-8kd.pages.dev"
+              rel="external"
+              alt="My Blog"
+              className={styles.navLinkItemText}
+            >
+              {t("navbar.Blog")}
+            </a>
+          </li>
+          <li className={styles.navLinkItem}>
+            <Link to="/services" className={styles.navLinkItemText}>
+              {t("navbar.Services")}
+            </Link>
+          </li>
+          <li className={styles.navLinkItem}>
+            <Link to="/artwork" className={styles.navLinkItemText}>
+              {t("navbar.Artwork")}
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
-
-export default Header;

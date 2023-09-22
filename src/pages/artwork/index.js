@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, graphql } from "gatsby";
-import Layout from "../../components/layout";
+import { Layout } from "../../components/layout";
 import { Seo } from "../../components/seo";
 import * as styles from "../../styles/content.module.scss";
 
@@ -42,5 +42,4 @@ export const query = graphql`
 `;
 
 export const Head = () => <Seo title="My Artwork" />;
-
 export default ArtworkPage;
