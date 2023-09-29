@@ -4,6 +4,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Seo } from "../components/seo";
 import * as styles from "../styles/content.module.scss";
 import { useTranslation } from "react-i18next";
+import { AboutPage } from "./about";
+import { Contact } from "./contact";
+
+export const Greeting = () => {};
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -21,6 +25,10 @@ const IndexPage = () => {
           <p>{t("topPage.introText")}</p>
         </div>
       </div>
+      <h2>About Me</h2>
+      <AboutPage />
+      <h2>Contact</h2>
+      <Contact />
     </Layout>
   );
 };
