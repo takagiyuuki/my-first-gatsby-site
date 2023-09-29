@@ -1,23 +1,15 @@
 import * as React from "react";
 import { Layout } from "../components/layout";
 import { Seo } from "../components/seo";
+import { childContact } from "../components/childContact";
 
-export const Contact = () => {
-  return (
-    <>
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <p>Hello World</p>
-    </>
-  );
-};
-
-const ContactTop = () => {
+const Contact = () => {
   return (
     <Layout pageTitle="Contact">
-      <Contact />
+      <childContact />
     </Layout>
   );
 };
 
 export const Head = () => <Seo title="Contact" />;
-export default ContactTop;
+export default Contact;
