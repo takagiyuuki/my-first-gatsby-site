@@ -24,19 +24,6 @@ export const Header = () => {
       <Link to="/" className={styles.siteTitle}>
         {data.site.siteMetadata.title}
       </Link>
-      <div className={styles.langButtons}>
-        <ul>
-          <li>
-            <button onClick={() => changeLang("en")}>EN</button>
-          </li>
-          <li>
-            <button onClick={() => changeLang("de")}>DE</button>
-          </li>
-          <li>
-            <button onClick={() => changeLang("ja")}>JA</button>
-          </li>
-        </ul>
-      </div>
       <nav className={styles.navBar}>
         <ul className={styles.navLink}>
           <li className={styles.navLinkItem}>
@@ -70,6 +57,34 @@ export const Header = () => {
             </Link>
           </li>
         </ul>
+        <div className={styles.navBar}>
+          <ul className={styles.navLink}>
+            <li className={styles.navLinkItem}>
+              <button
+                onClick={() => changeLang("en")}
+                className={styles.navLinkItemText}
+              >
+                EN
+              </button>
+            </li>
+            <li className={styles.navLinkItem}>
+              <button
+                onClick={() => changeLang("de")}
+                className={styles.navLinkItemText}
+              >
+                DE
+              </button>
+            </li>
+            <li className={styles.navLinkItem}>
+              <button
+                onClick={() => changeLang("ja")}
+                className={styles.navLinkItemText}
+              >
+                JA
+              </button>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
   );
