@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as styles from "../styles/menuLang.module.scss";
 
-export const menuLang = () => {
+export const MenuLang = () => {
   return (
     <div>
       <input type="checkbox" className={styles.menuBtn} id="menu-btn" />

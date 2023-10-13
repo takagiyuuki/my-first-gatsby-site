@@ -1,5 +1,5 @@
 import * as React from "react";
-export const childAbout = () => {
+export const AboutContents = () => {
   return (
     <div>
       <p>
