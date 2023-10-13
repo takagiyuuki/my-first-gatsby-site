@@ -21,6 +21,7 @@ export const Seo = ({ title, description, pathname, children }) => {
   return (
     <>
       <title>{seo.title}</title>
+      <meta charset="UTF-8" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
