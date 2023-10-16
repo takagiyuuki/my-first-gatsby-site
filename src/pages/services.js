@@ -10,9 +10,6 @@ const ServicesPage = () => {
   );
 };
 
-// export const Head = () => <title>Services</title>;
-// Rest of the component...
-
 export const Head = () => <Seo title="Services" />;
 
 export default ServicesPage;
