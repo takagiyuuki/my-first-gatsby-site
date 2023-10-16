@@ -1,0 +1,12 @@
+import React from "react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
+
+const TOC = ({ body }) => {
+  return (
+    <MDXRenderer>
+    {body}
+  </MDXRenderer>
+  );
+};
+
+export default TOC;
