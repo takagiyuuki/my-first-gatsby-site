@@ -70,22 +70,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `blog`,
-        path: `${__dirname}/blog`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
         name: `content`,
         path: `${__dirname}/src/content`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages`,
       },
     },
     {
@@ -105,7 +91,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-smartypants`,
+          // `gatsby-remark-smartypants`,
           `gatsby-remark-autolink-headers`,
         ],
       },
