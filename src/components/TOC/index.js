@@ -3,9 +3,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const TOC = ({ body }) => {
   return (
-    <MDXRenderer>
-    {body}
-  </MDXRenderer>
+<MDXRenderer itemProp="articleBody">{body}</MDXRenderer>
   );
 };
 
