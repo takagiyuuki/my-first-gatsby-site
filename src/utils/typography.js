@@ -1,7 +1,7 @@
 import Typography from "typography";
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "20px",
   baseLineHeight: 1.666,
   googleFonts: [
     {
@@ -13,35 +13,16 @@ const typography = new Typography({
       styles: ["400", "500", "700", "900"],
     },
     {
-      name: "Lato",
-      styles: ["400", "500", "700", "900"],
-    },
-    {
-      name: "Neuton",
-      styles: ["400", "500", "700", "900"],
-    },
-    {
-      name: "Montserrat",
-      styles: ["400", "500", "700", "900"],
-    },
-    {
-      name: "Arvo",
+      name: "Didact Gothic",
       styles: ["400", "500", "700", "900"],
     },
   ],
   headerFontFamily: [
-    "Montserrat",
-    "Neuton",
-    "Helvetica Neue",
-    "Jost",
-    "Avenir Next",
-    "Segoe UI",
-    "Helvetica",
-    "Arial",
-    "sans-serif",
-    "Noto Sans JP",
+    // "Jost",
+    // "Noto Sans JP",
+    "Didact Gothic",
   ],
-  bodyFontFamily: ["Arvo", "Lato", "Georgia", "Jost", "Noto Sans JP"],
+  bodyFontFamily: ["Didact Gothic"],
 });
 
 export default typography;

@@ -1,12 +1,13 @@
 import * as React from "react";
 import { Layout } from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
+
 import { Seo } from "../components/seo";
 import * as styles from "../styles/content.module.scss";
 import { useTranslation } from "react-i18next";
-import { AboutContents } from "../components/AboutContents";
+
 import { ContactContents } from "../components/ContactContents";
-// import { MenuLang } from "../components/MenuLang";
+import About from "../content/about.mdx";
 
 const IndexPage = () => {
   const { t } = useTranslation();
@@ -25,8 +26,9 @@ const IndexPage = () => {
           <p>{t("topPage.introText")}</p>
         </div>
       </div>
-      <h2>About Me</h2>
-      <AboutContents />
+      <article className={styles.markdownBody}>
+      <About />
+      </article>
       <h2>Contact</h2>
       <ContactContents />
     </Layout>

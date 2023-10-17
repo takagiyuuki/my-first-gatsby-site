@@ -2,8 +2,14 @@
 
 /* Whole Page */
 .container {
+  margin: auto;
+  max-width: 900px;
   background-color: global.$background-body;
   min-height: 100%;
+}
+
+main {
+  padding: 2em;
 }
 
 .main-heading {
