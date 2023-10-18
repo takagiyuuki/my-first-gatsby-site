@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import * as styles from "../styles/footer.module.scss";
+import * as styles from "../../styles/footer.module.scss";
 
 export const Footer = () => {
   return (
@@ -14,12 +14,12 @@ export const Footer = () => {
       >
         <StaticImage
           alt="Github Link"
-          src="../images/github-mark.svg"
+          src="../../images/github-mark.svg"
           className={styles.footerLogoGithubBlack}
         />
         <StaticImage
           alt="Github Link"
-          src="../images/github-mark-white.svg"
+          src="../../images/github-mark-white.svg"
           className={styles.footerLogoGithubWhite}
         />
       </a>

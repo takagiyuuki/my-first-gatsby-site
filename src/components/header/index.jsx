@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import * as styles from "../styles/header.module.scss";
+import * as styles from "../../styles/header.module.scss";
 import { useTranslation } from "react-i18next";
 
 export const Header = () => {

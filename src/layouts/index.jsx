@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Header } from "./header";
-import { Footer } from "./footer";
+import { Header } from "../components/header";
+import { Footer } from "../components/footer";
 import * as styles from "../styles/layout.module.scss";
 
 export const Layout = ({ pageTitle, children }) => {
