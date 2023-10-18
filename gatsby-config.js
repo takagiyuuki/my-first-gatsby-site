@@ -94,6 +94,9 @@ module.exports = {
           // `gatsby-remark-smartypants`,
           `gatsby-remark-autolink-headers`,
         ],
+        mdxOptions: {
+          remarkPlugins: [require(`remark-gfm`)],
+        },
       },
     },
     {
