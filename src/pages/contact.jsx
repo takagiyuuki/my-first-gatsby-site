@@ -1,15 +1,15 @@
 import * as React from "react";
-import { Layout } from "../components/layout";
+import { Layout } from "../layouts";
 import { Seo } from "../components/seo";
-import { ContactContents } from "../components/ContactContents";
+import { Contact } from "../components/contact";
 
-const Contact = () => {
+const ContactPage = () => {
   return (
     <Layout pageTitle="Contact">
-      <ContactContents />
+      <Contact />
     </Layout>
   );
 };
 
 export const Head = () => <Seo title="Contact" />;
-export default Contact;
+export default ContactPage;
