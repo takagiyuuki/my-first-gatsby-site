@@ -2,7 +2,9 @@
 
 /* Whole Page */
 .container {
-  margin: auto;
+  padding-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 900px;
   background-color: global.$background-body;
   min-height: 100%;
