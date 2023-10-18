@@ -57,34 +57,6 @@ export const Header = () => {
             </Link>
           </li>
         </ul>
-        <div className={styles.navBar}>
-          <ul className={styles.navLink}>
-            <li className={styles.navLinkItem}>
-              <button
-                onClick={() => changeLang("en")}
-                className={styles.navLinkItemText}
-              >
-                EN
-              </button>
-            </li>
-            <li className={styles.navLinkItem}>
-              <button
-                onClick={() => changeLang("de")}
-                className={styles.navLinkItemText}
-              >
-                DE
-              </button>
-            </li>
-            <li className={styles.navLinkItem}>
-              <button
-                onClick={() => changeLang("ja")}
-                className={styles.navLinkItemText}
-              >
-                JA
-              </button>
-            </li>
-          </ul>
-        </div>
       </nav>
     </header>
   );
