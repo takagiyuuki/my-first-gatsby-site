@@ -4,6 +4,7 @@
 .body-flex {
   display: flex;
   .body-image {
+    position: sticky;
     width: 40%;
     margin-right: 2rem;
   }
