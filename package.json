@@ -1,8 +1,8 @@
 {
-  "name": "my-portofolio-site",
+  "name": "my-portfolio-site",
   "version": "1.0.0",
   "private": true,
-  "description": "my-portofolio-site",
+  "description": "my-portoflio-site",
   "author": "Yuuki Takagi",
   "keywords": [
     "gatsby"
@@ -44,6 +44,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.2.2",
+    "react-icons": "^4.11.0",
     "react-typography": "^0.16.23",
     "remark-gfm": "^1.0.0",
     "sass": "^1.66.1",

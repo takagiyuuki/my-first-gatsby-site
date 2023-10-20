@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Header } from "../components/header";
-import { StickyFooter } from "../components/StickyFooter";
+import { Footer } from "../components/footer";
 import * as styles from "../styles/layout.module.scss";
 
 export const Layout = ({ pageTitle, children }) => {
@@ -11,7 +11,7 @@ export const Layout = ({ pageTitle, children }) => {
         <h1 className={styles.mainHeading}>{pageTitle}</h1>
         {children}
       </main>
-      <StickyFooter />
+      <Footer />
     </div>
   );
 };

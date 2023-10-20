@@ -9,7 +9,7 @@ const AboutPage = () => {
   return (
     <Layout pageTitle="AboutPage">
       <StaticImage
-        alt="samplea"
+        alt="sample"
         src="https://source.unsplash.com/featured/?food,yellow"
       />
       <article className={styles.markdownBody}>
