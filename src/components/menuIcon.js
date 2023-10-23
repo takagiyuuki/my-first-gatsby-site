@@ -1,6 +1,6 @@
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import EditIcon from "@mui/icons-material/Edit";
@@ -12,6 +12,8 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+
+import Link from "@mui/material/Link";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -56,7 +58,8 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-export default function CustomizedMenus() {
+// export default function CustomizedMenus() {
+export const CustomizedMenus = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -65,9 +68,8 @@ export default function CustomizedMenus() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
   return (
-    <div>
+    <>
       <IconButton
         id="demo-customized-button"
         aria-controls={open ? "demo-customized-menu" : undefined}
@@ -84,7 +86,7 @@ export default function CustomizedMenus() {
         aria-label="menu"
         sx={{ mr: 2 }}
       >
-        <MenuIcon >
+        <MenuIcon />
       </IconButton>
       <StyledMenu
         id="demo-customized-menu"
@@ -95,13 +97,27 @@ export default function CustomizedMenus() {
         open={open}
         onClose={handleClose}
       >
+        <Link color="inherit" underline="none" href="/about">
+          <MenuItem onClick={handleClose} disableRipple>
+            <EditIcon />
+            About
+          </MenuItem>
+        </Link>
         <MenuItem onClick={handleClose} disableRipple>
           <EditIcon />
-          Edit
+          Contact
+        </MenuItem>
+        <MenuItem onClick={handleClose} disableRipple>
+          <EditIcon />
+          Services
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <FileCopyIcon />
-          Duplicate
+          Artwork
+        </MenuItem>
+        <MenuItem onClick={handleClose} disableRipple>
+          <FileCopyIcon />
+          Blog
         </MenuItem>
         <Divider sx={{ my: 0.5 }} />
         <MenuItem onClick={handleClose} disableRipple>
@@ -113,6 +129,8 @@ export default function CustomizedMenus() {
           More
         </MenuItem>
       </StyledMenu>
-    </div>
+    </>
   );
-}
+};
+
+// export default CustomizedMenus;

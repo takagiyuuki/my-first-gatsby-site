@@ -50,7 +50,8 @@ function Copyright() {
 
 const defaultTheme = createTheme();
 
-export default function Footer() {
+// export default function Footer() {
+export function Footer() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
@@ -75,4 +76,4 @@ export default function Footer() {
       </Box>
     </ThemeProvider>
   );
-}
+};
