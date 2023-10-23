@@ -13,7 +13,12 @@ import { MdEggAlt } from "react-icons/md";
 import { LuEggFried } from "react-icons/lu";
 
 import { Seo } from "../components/seo";
-import { CustomizedMenus } from "../component/MenuIcon";
+import { CustomizedMenus } from "../components/menuIcon";
+import { Footer } from "../components/footer";
+import { LanguageMenu } from "../components/MenuLang";
+
+import { Contact } from "../components/contact";
+import About from "../content/about.mdx";
 
 const ButtonAppBar = () => {
   return (
@@ -37,20 +42,39 @@ const ButtonAppBar = () => {
               variant="h6"
               component="div"
               sx={{
-                flexGrow: 1
+                flexGrow: 1,
               }}
             >
-              Sample
-              <Link color="inherit" underline="hover" href="/about" sx={{px: 2,mt:"auto"}}>
+              <Link
+                color="inherit"
+                underline="hover"
+                href="/about"
+                sx={{ px: 2, mt: "auto" }}
+              >
                 About
               </Link>
-              <Link color="inherit" underline="hover" href="/contact" sx={{px: 2,mt:"auto"}}>
+              <Link
+                color="inherit"
+                underline="hover"
+                href="/contact"
+                sx={{ px: 2, mt: "auto" }}
+              >
                 Contact
               </Link>
-              <Link color="inherit" underline="hover" href="/services" sx={{px: 2,mt:"auto"}}>
+              <Link
+                color="inherit"
+                underline="hover"
+                href="/services"
+                sx={{ px: 2, mt: "auto" }}
+              >
                 Services
               </Link>
-              <Link color="inherit" underline="hover" href="/artwork" sx={{px: 2,mt:"auto"}}>
+              <Link
+                color="inherit"
+                underline="hover"
+                href="/artwork"
+                sx={{ px: 2, mt: "auto" }}
+              >
                 Artwork
               </Link>
               <Link
@@ -59,24 +83,26 @@ const ButtonAppBar = () => {
                 href="https://notion-blog-8kd.pages.dev"
                 target="_blank"
                 rel="noopener"
-                sx={{px: 2,mt:"auto"}}
+                sx={{ px: 2, mt: "auto" }}
               >
                 Blog
               </Link>
             </Typography>
-            {/* <IconButton
+            <IconButton
               size="large"
               edge="end"
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <MenuIcon />
-            </IconButton> */}
-            {/* Add MenuIcon Cpmpornent */}
-            <CustomizedMenus />
+              <LanguageMenu />
+              <CustomizedMenus />
+            </IconButton>
           </Toolbar>
         </AppBar>
+          <About />
+        <Contact />
+        <Footer />
       </Box>
     </>
   );
