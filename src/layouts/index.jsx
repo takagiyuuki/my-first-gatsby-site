@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Header } from "../components/header";
+import { HeaderBar } from "../components/header/sample";
 import { Footer } from "../components/footer";
 import * as styles from "../styles/layout.module.scss";
 
 export const Layout = ({ pageTitle, children }) => {
   return (
     <div className={styles.container}>
-      <Header />
+      <HeaderBar />
       <main>
         <h1 className={styles.mainHeading}>{pageTitle}</h1>
         {children}

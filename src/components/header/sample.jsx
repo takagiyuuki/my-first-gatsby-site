@@ -1,5 +1,4 @@
 import * as React from "react";
-
 // MUI
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -10,27 +9,47 @@ import IconButton from "@mui/material/IconButton";
 // import MenuIcon from "@mui/icons-material/Menu";
 import CssBaseline from "@mui/material/CssBaseline";
 import Link from "@mui/material/Link";
-
 // Icons
 import { MdEggAlt } from "react-icons/md";
 import { LuEggFried } from "react-icons/lu";
+// LocalComponents
+import { HeaderMenuIcon } from "./HeaderMenuIcon";
+import { HeaderMenuLang } from "./HeaderMenuLang";
 
-// LocalCompornet
-import { Seo } from "../components/seo";
-import { CustomizedMenus } from "../components/menuIcon";
-import { Footer } from "../components/footer";
-import { LanguageMenu } from "../components/MenuLang";
-import { Contact } from "../components/contact";
-import About from "../content/about.mdx";
-
-const ButtonAppBar = () => {
+export const HeaderBar = () => {
+  const HeaderIcon = ({ children }) => {
+    return (
+      <IconButton
+        size="medium"
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        sx={{ mr: 1 }}
+        href="/"
+      >
+        {children}
+      </IconButton>
+    );
+  };
+  const HeaderLink = ({ link, children }) => {
+    return (
+      <Link
+        color="inherit"
+        underline="hover"
+        href={link}
+        sx={{ px: 2, mt: "auto" }}
+      >
+        {children}
+      </Link>
+    );
+  };
   return (
     <>
       <CssBaseline />
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" size="medium">
           <Toolbar>
-            <IconButton
+            {/* <IconButton
               size="medium"
               edge="start"
               color="inherit"
@@ -40,7 +59,11 @@ const ButtonAppBar = () => {
             >
               <MdEggAlt />
               <LuEggFried />
-            </IconButton>
+            </IconButton> */}
+            <HeaderIcon>
+              <MdEggAlt />
+              <LuEggFried />
+            </HeaderIcon>
             <Typography
               variant="h6"
               component="div"
@@ -48,7 +71,14 @@ const ButtonAppBar = () => {
                 flexGrow: 1,
               }}
             >
-              <Link
+              <HeaderLink link={"/about"}>About</HeaderLink>
+              <HeaderLink link={"/contact"}>Contact</HeaderLink>
+              <HeaderLink link={"/services"}>Services</HeaderLink>
+              <HeaderLink link={"/artwork"}>Artwork</HeaderLink>
+              <HeaderLink link={"https://notion-blog-8kd.pages.dev"}>
+                Blog
+              </HeaderLink>
+              {/* <Link
                 color="inherit"
                 underline="hover"
                 href="/about"
@@ -89,28 +119,23 @@ const ButtonAppBar = () => {
                 sx={{ px: 2, mt: "auto" }}
               >
                 Blog
-              </Link>
+              </Link> */}
             </Typography>
-            <IconButton
+            {/* <IconButton
               size="large"
               edge="end"
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
-            >
-              <LanguageMenu />
-              <CustomizedMenus />
-            </IconButton>
+            > */}
+            <HeaderIcon>
+              <HeaderMenuLang />
+              <HeaderMenuIcon />
+            </HeaderIcon>
+            {/* </IconButton> */}
           </Toolbar>
         </AppBar>
-        <About />
-        <Contact />
-        <Footer />
       </Box>
     </>
   );
 };
-
-export const Head = () => <Seo title="Services" />;
-
-export default ButtonAppBar;

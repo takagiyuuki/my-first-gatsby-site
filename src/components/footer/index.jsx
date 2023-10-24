@@ -76,4 +76,4 @@ export function Footer() {
       </Box>
     </ThemeProvider>
   );
-};
+}
