@@ -1,15 +1,16 @@
 import * as React from "react";
+
+// MUI
 import { styled, alpha } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import EditIcon from "@mui/icons-material/Edit";
-import FileCopyIcon from "@mui/icons-material/FileCopy";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import Link from "@mui/material/Link";
 
+// Icons
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-
-import Link from "@mui/material/Link";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -86,11 +87,11 @@ export const CustomizedMenus = () => {
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
         // Add props
-        size="large"
+        size="medium"
         edge="end"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 2 }}
+        sx={{ mr: 1 }}
       >
         <MenuIcon />
       </IconButton>
@@ -108,34 +109,6 @@ export const CustomizedMenus = () => {
         <MenuLink link={"/services"}>Services</MenuLink>
         <MenuLink link={"/artwork"}>Artwork</MenuLink>
         <MenuLink link={"https://notion-blog-8kd.pages.dev"}>Blog</MenuLink>
-        <Link color="inherit" underline="none" href="/contact">
-          <MenuItem onClick={handleClose} disableRipple>
-            <EditIcon />
-            Contact
-          </MenuItem>
-        </Link>
-        <Link color="inherit" underline="none" href="/services">
-          <MenuItem onClick={handleClose} disableRipple>
-            <EditIcon />
-            Services
-          </MenuItem>
-        </Link>
-        <Link color="inherit" underline="none" href="/artwork">
-          <MenuItem onClick={handleClose} disableRipple>
-            <FileCopyIcon />
-            Artwork
-          </MenuItem>
-        </Link>
-        <Link
-          color="inherit"
-          underline="none"
-          href="https://notion-blog-8kd.pages.dev"
-        >
-          <MenuItem onClick={handleClose} disableRipple>
-            <FileCopyIcon />
-            Blog
-          </MenuItem>
-        </Link>
       </StyledMenu>
     </>
   );
