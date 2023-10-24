@@ -27,11 +27,11 @@ import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import EditIcon from "@mui/icons-material/Edit";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import IconButton from "@mui/material/IconButton";
 import LanguageIcon from "@mui/icons-material/Language";
+import TranslateIcon from "@mui/icons-material/Translate";
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -116,15 +116,15 @@ export const LanguageMenu = () => {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose} disableRipple>
-          <EditIcon />
+          <TranslateIcon />
           English
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
-          <EditIcon />
+          <TranslateIcon />
           日本語
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
-          <EditIcon />
+          <TranslateIcon />
           Español
         </MenuItem>
       </StyledMenu>

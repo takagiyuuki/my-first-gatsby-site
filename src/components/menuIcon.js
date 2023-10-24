@@ -1,13 +1,9 @@
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
-// import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import EditIcon from "@mui/icons-material/Edit";
-import Divider from "@mui/material/Divider";
-import ArchiveIcon from "@mui/icons-material/Archive";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 import IconButton from "@mui/material/IconButton";
@@ -58,7 +54,6 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-// export default function CustomizedMenus() {
 export const CustomizedMenus = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -68,6 +63,17 @@ export const CustomizedMenus = () => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const MenuLink = ({ link, children }) => {
+    return (
+      <Link color="inherit" underline="none" href={link}>
+        <MenuItem onClick={handleClose} disableRipple>
+          <EditIcon />
+          {children}
+        </MenuItem>
+      </Link>
+    );
+  };
+
   return (
     <>
       <IconButton
@@ -97,40 +103,40 @@ export const CustomizedMenus = () => {
         open={open}
         onClose={handleClose}
       >
-        <Link color="inherit" underline="none" href="/about">
+        <MenuLink link={"/about"}>About</MenuLink>
+        <MenuLink link={"/contact"}>Contact</MenuLink>
+        <MenuLink link={"/services"}>Services</MenuLink>
+        <MenuLink link={"/artwork"}>Artwork</MenuLink>
+        <MenuLink link={"https://notion-blog-8kd.pages.dev"}>Blog</MenuLink>
+        <Link color="inherit" underline="none" href="/contact">
           <MenuItem onClick={handleClose} disableRipple>
             <EditIcon />
-            About
+            Contact
           </MenuItem>
         </Link>
-        <MenuItem onClick={handleClose} disableRipple>
-          <EditIcon />
-          Contact
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <EditIcon />
-          Services
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <FileCopyIcon />
-          Artwork
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <FileCopyIcon />
-          Blog
-        </MenuItem>
-        <Divider sx={{ my: 0.5 }} />
-        <MenuItem onClick={handleClose} disableRipple>
-          <ArchiveIcon />
-          Archive
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-          <MoreHorizIcon />
-          More
-        </MenuItem>
+        <Link color="inherit" underline="none" href="/services">
+          <MenuItem onClick={handleClose} disableRipple>
+            <EditIcon />
+            Services
+          </MenuItem>
+        </Link>
+        <Link color="inherit" underline="none" href="/artwork">
+          <MenuItem onClick={handleClose} disableRipple>
+            <FileCopyIcon />
+            Artwork
+          </MenuItem>
+        </Link>
+        <Link
+          color="inherit"
+          underline="none"
+          href="https://notion-blog-8kd.pages.dev"
+        >
+          <MenuItem onClick={handleClose} disableRipple>
+            <FileCopyIcon />
+            Blog
+          </MenuItem>
+        </Link>
       </StyledMenu>
     </>
   );
 };
-
-// export default CustomizedMenus;
