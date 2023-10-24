@@ -24,11 +24,12 @@
 // };
 
 import * as React from "react";
+// MUI
 import { styled, alpha } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-
+// Icons
 import IconButton from "@mui/material/IconButton";
 import LanguageIcon from "@mui/icons-material/Language";
 import TranslateIcon from "@mui/icons-material/Translate";
@@ -77,7 +78,7 @@ const StyledMenu = styled((props) => (
 }));
 
 // export default function CustomizedMenus() {
-export const LanguageMenu = () => {
+export const HeaderMenuLang = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {

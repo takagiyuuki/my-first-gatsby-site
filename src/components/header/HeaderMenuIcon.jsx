@@ -1,5 +1,4 @@
 import * as React from "react";
-
 // MUI
 import { styled, alpha } from "@mui/material/styles";
 import Menu from "@mui/material/Menu";
@@ -7,7 +6,6 @@ import MenuItem from "@mui/material/MenuItem";
 import EditIcon from "@mui/icons-material/Edit";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Link from "@mui/material/Link";
-
 // Icons
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -55,7 +53,7 @@ const StyledMenu = styled((props) => (
   },
 }));
 
-export const CustomizedMenus = () => {
+export const HeaderMenuIcon = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {

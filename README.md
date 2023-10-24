@@ -28,4 +28,5 @@ The code in this repository is provided under the MIT License, allowing for free
 If you have any questions or suggestions, feel free to [contact](mailto:youremail@example.com) us.
 
 ---
-© 2023 Yuuki takagi
+
+© 2023 Yuki Takagi
