@@ -18,18 +18,18 @@ const IndexPage = () => {
       <p>I'm making this by following the Gatsby Tutorial.</p>
       <div className={styles.bodyFlex}>
         <StaticImage
-          alt="Clifford, a reddish-brown pitbull, posing on a couch and looking stoically at the camera"
-          src="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large"
+          alt="Static"
+          src="https://source.unsplash.com/featured/?rain"
           className={styles.bodyImage}
         />
         <div className={styles.bodyText}>
           <p>{t("topPage.introText")}</p>
+          <article className={styles.markdownBody}>
+            <About />
+          </article>
+          <Contact />
         </div>
       </div>
-      <article className={styles.markdownBody}>
-        <About />
-      </article>
-      <Contact />
     </Layout>
   );
 };
