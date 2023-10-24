@@ -91,7 +91,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          // `gatsby-remark-smartypants`,
+          `gatsby-remark-smartypants`,
           `gatsby-remark-autolink-headers`,
         ],
         mdxOptions: {
