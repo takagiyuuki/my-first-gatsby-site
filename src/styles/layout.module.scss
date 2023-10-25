@@ -2,7 +2,6 @@
 
 /* Whole Page */
 .container {
-  padding-top: 80px;
   margin-right: auto;
   margin-left: auto;
   max-width: 900px;
@@ -11,7 +10,20 @@
 }
 
 main {
+  padding-top: 80px;
   padding: 2em;
+  // Markdown CSS
+  // .markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  // color: #24292e;
+  // font-size: 16px;
+  // line-height: 1.5;
+  word-wrap: break-word;
+  // }
+  .markdown-body .pl-c {
+    color: #6a737d;
+  }
 }
 
 .main-heading {

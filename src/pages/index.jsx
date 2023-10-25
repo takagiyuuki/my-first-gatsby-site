@@ -24,9 +24,7 @@ const IndexPage = () => {
         />
         <div className={styles.bodyText}>
           <p>{t("topPage.introText")}</p>
-          <article className={styles.markdownBody}>
-            <About />
-          </article>
+          <About />
           <Contact />
         </div>
       </div>

@@ -49,14 +49,7 @@ module.exports = {
         cache_busting_mode: `none`,
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        workboxConfig: {
-          globPatterns: [`**/icon-path*`],
-        },
-      },
-    },
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-sitemap`,
