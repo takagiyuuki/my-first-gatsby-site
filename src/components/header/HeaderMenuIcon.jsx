@@ -41,7 +41,7 @@ const StyledMenu = styled((props) => (
       "& .MuiSvgIcon-root": {
         fontSize: 18,
         color: theme.palette.text.secondary,
-        marginRight: theme.spacing(1.5),
+        // marginRight: theme.spacing(1.5),
       },
       "&:active": {
         backgroundColor: alpha(
@@ -86,10 +86,10 @@ export const HeaderMenuIcon = () => {
         endIcon={<KeyboardArrowDownIcon />}
         // Add props
         size="medium"
-        edge="end"
+        // edge="end"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 1 }}
+        sx={{ m: "auto" }}
       >
         <MenuIcon />
       </IconButton>

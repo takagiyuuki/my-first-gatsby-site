@@ -65,7 +65,6 @@ const StyledMenu = styled((props) => (
       "& .MuiSvgIcon-root": {
         fontSize: 18,
         color: theme.palette.text.secondary,
-        marginRight: theme.spacing(1.5),
       },
       "&:active": {
         backgroundColor: alpha(
@@ -99,11 +98,11 @@ export const HeaderMenuLang = () => {
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
         // Add props
-        size="large"
+        size="medium"
         edge="end"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 2 }}
+        sx={{ m: "auto" }}
       >
         <LanguageIcon />
       </IconButton>

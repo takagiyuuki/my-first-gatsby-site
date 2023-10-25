@@ -16,7 +16,6 @@ import { LuEggFried } from "react-icons/lu";
 import { HeaderMenuIcon } from "./HeaderMenuIcon";
 import { HeaderMenuLang } from "./HeaderMenuLang";
 
-
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -51,7 +50,7 @@ export const HeaderBar = (props: Props) => {
         edge="start"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 1 }}
+        sx={{ justifyContent: "flex-start" }}
         href="/"
       >
         {children}
@@ -65,7 +64,7 @@ export const HeaderBar = (props: Props) => {
         edge="end"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 1 }}
+        sx={{ justifyContent: "flex-end" }}
       >
         {children}
       </IconButton>
@@ -88,8 +87,8 @@ export const HeaderBar = (props: Props) => {
       <CssBaseline />
       <HideOnScroll {...props}>
         {/* <Box sx={{ flexGrow: 1 }}> */}
-        <AppBar>
-          <Toolbar>
+        <AppBar enableColorOnDark={true}>
+          <Toolbar sx={{ display: "flex" }}>
             <SiteIcon>
               <MdEggAlt />
               <LuEggFried />
@@ -97,6 +96,7 @@ export const HeaderBar = (props: Props) => {
             <Typography
               variant="h6"
               component="div"
+              sx={{ justifyContent: "center" }}
             >
               <HeaderLink link={"/about"}>About</HeaderLink>
               <HeaderLink link={"/contact"}>Contact</HeaderLink>
