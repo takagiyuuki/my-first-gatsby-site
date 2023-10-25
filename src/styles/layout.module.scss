@@ -1,15 +1,14 @@
 @use "./global";
 
 /* Whole Page */
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 900px;
-  background-color: global.$background-body;
-  min-height: 100%;
-}
-
-main {
+// .container {
+//   margin-right: auto;
+//   margin-left: auto;
+//   max-width: 900px;
+//   background-color: global.$background-body;
+//   min-height: 100%;
+// }
+body {
   padding-top: 80px;
   padding: 2em;
   // Markdown CSS
@@ -24,18 +23,10 @@ main {
   .markdown-body .pl-c {
     color: #6a737d;
   }
-  h2 {
-    margin-top: 2rem;
-    color: #1976d2;
-  }
-  p {
-    margin-top: 0%;
-  }
-  table {
-    tr {
-      border: none;
-    }
-  }
+}
+h2 {
+  margin-top: 2rem;
+  color: #1976d2;
 }
 .main-heading {
   color: global.$text-main;
