@@ -15,15 +15,28 @@ import { HeaderMenuIcon } from "./HeaderMenuIcon";
 import { HeaderMenuLang } from "./HeaderMenuLang";
 
 export const HeaderBar = () => {
-  const HeaderIcon = ({ children }) => {
+  const SiteIcon = ({ children }) => {
     return (
       <IconButton
-        size="medium"
+        size="large"
         edge="start"
         color="inherit"
         aria-label="menu"
         sx={{ mr: 1 }}
         href="/"
+      >
+        {children}
+      </IconButton>
+    );
+  };
+  const HeaderIcon = ({ children }) => {
+    return (
+      <IconButton
+        size="medium"
+        edge="end"
+        color="inherit"
+        aria-label="menu"
+        sx={{ mr: 1 }}
       >
         {children}
       </IconButton>
@@ -47,10 +60,10 @@ export const HeaderBar = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" size="medium">
           <Toolbar>
-            <HeaderIcon>
+            <SiteIcon>
               <MdEggAlt />
               <LuEggFried />
-            </HeaderIcon>
+            </SiteIcon>
             <Typography
               variant="h6"
               component="div"
@@ -68,6 +81,8 @@ export const HeaderBar = () => {
             </Typography>
             <HeaderIcon>
               <HeaderMenuLang />
+            </HeaderIcon>
+            <HeaderIcon>
               <HeaderMenuIcon />
             </HeaderIcon>
           </Toolbar>
