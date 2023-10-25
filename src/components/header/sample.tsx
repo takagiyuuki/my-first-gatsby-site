@@ -1,12 +1,14 @@
 import * as React from "react";
 // MUI
 import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import CssBaseline from "@mui/material/CssBaseline";
 import Link from "@mui/material/Link";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
+import Slide from "@mui/material/Slide";
 // Icons
 import { MdEggAlt } from "react-icons/md";
 import { LuEggFried } from "react-icons/lu";
@@ -14,7 +16,34 @@ import { LuEggFried } from "react-icons/lu";
 import { HeaderMenuIcon } from "./HeaderMenuIcon";
 import { HeaderMenuLang } from "./HeaderMenuLang";
 
-export const HeaderBar = () => {
+
+interface Props {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  // window?: () => Window;
+  children: React.ReactElement;
+}
+
+function HideOnScroll(props: Props) {
+  const { children } = props;
+  // const { children, window } = props;
+  // Note that you normally won't need to set the window ref as useScrollTrigger
+  // will default to window.
+  // This is only being set here because the demo is in an iframe.
+  const trigger = useScrollTrigger({
+    // target: window ? window() : undefined,
+  });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
+export const HeaderBar = (props: Props) => {
   const SiteIcon = ({ children }) => {
     return (
       <IconButton
@@ -57,8 +86,9 @@ export const HeaderBar = () => {
   return (
     <>
       <CssBaseline />
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" size="medium">
+      <HideOnScroll {...props}>
+        {/* <Box sx={{ flexGrow: 1 }}> */}
+        <AppBar>
           <Toolbar>
             <SiteIcon>
               <MdEggAlt />
@@ -67,9 +97,6 @@ export const HeaderBar = () => {
             <Typography
               variant="h6"
               component="div"
-              sx={{
-                flexGrow: 1,
-              }}
             >
               <HeaderLink link={"/about"}>About</HeaderLink>
               <HeaderLink link={"/contact"}>Contact</HeaderLink>
@@ -87,7 +114,8 @@ export const HeaderBar = () => {
             </HeaderIcon>
           </Toolbar>
         </AppBar>
-      </Box>
+        {/* </Box> */}
+      </HideOnScroll>
     </>
   );
 };
