@@ -85,7 +85,7 @@ export function Footer() {
               <EggAltIcon />
             </SiteIcon>
             <Box sx={{ px: 2, mx: 2 }}>
-              <Typography variant="body1">Contact me:)</Typography>
+              <Typography variant="body1">Contact me</Typography>
               <Copyright />
             </Box>
             <Box sx={{ px: 2, mx: 2 }}>

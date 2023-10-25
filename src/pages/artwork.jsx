@@ -19,7 +19,7 @@ const Artwork = () => {
       <h2>3DCG</h2>
       <StaticImage
         alt="sample"
-        src="https://source.unsplash.com/featured/?3dcg"
+        src="https://source.unsplash.com/featured/?camera"
       />
       <h2>Animation</h2>
     </Layout>

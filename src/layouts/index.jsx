@@ -13,13 +13,18 @@ export const Layout = ({ pageTitle, children }) => {
     // <div className={styles.container}>
     <Container>
       <HeaderBar />
-      <Box sx={{ mt: 6 }}>
-        <main>
-          <h1 className={styles.mainHeading}>{pageTitle}</h1>
-          {children}
-        </main>
-        <Footer />
+      <Box
+        sx={{
+          mt: 8,
+          pt: 8,
+        }}
+      >
+        {/* <main> */}
+        <h1 className={styles.mainHeading}>{pageTitle}</h1>
+        {children}
+        {/* </main> */}
       </Box>
+      <Footer />
     </Container>
     // </div>
   );
