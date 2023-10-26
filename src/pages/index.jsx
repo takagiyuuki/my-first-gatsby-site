@@ -14,7 +14,6 @@ const IndexPage = () => {
 
   return (
     <Layout pageTitle={t("topPage.greeting")}>
-      <p>I'm making this by following the Gatsby Tutorial.</p>
       <StaticImage
         alt="Static"
         src="https://source.unsplash.com/featured/?rain"

@@ -9,10 +9,26 @@ import * as styles from "../styles/layout.module.scss";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#FF5733",
+    },
+    secondary: {
+      main: "#E0C2FF",
+      light: "#F5EBFF",
+      // dark: will be calculated from palette.secondary.main,
+      contrastText: "#47008F",
+    },
+  },
+});  
+
 export const Layout = ({ pageTitle, children }) => {
   return (
     // <div className={styles.container}>
-    <Box>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container>
         <HeaderBar />
@@ -29,7 +45,7 @@ export const Layout = ({ pageTitle, children }) => {
         </Box>
       </Container>
       <Footer />
-    </Box>
+    </ThemeProvider>
     // </div>
   );
 };

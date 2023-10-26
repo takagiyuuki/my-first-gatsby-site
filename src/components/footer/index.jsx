@@ -1,12 +1,10 @@
 import * as React from "react";
 // MUI
-import CssBaseline from "@mui/material/CssBaseline";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
-import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 // Icons
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -42,7 +40,7 @@ export function Footer() {
         edge="start"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 1 }}
+        sx={{ m: "auto" }}
         href="/"
       >
         {children}
@@ -56,7 +54,7 @@ export function Footer() {
         edge="end"
         color="inherit"
         aria-label="menu"
-        // sx={{ mr: 1 }}
+        sx={{ m: "auto" }}
         href={link}
         target="_blank"
       >
@@ -66,12 +64,9 @@ export function Footer() {
   };
   return (
     <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
       <Box
         component="footer"
         sx={{
-          py: 3,
-          px: 2,
           mt: "auto",
           backgroundColor: (theme) =>
             theme.palette.mode === "light"
@@ -80,26 +75,24 @@ export function Footer() {
         }}
       >
         <Container maxWidth="md">
-          <Toolbar>
-            <SiteIcon>
-              <EggAltIcon />
-            </SiteIcon>
-            <Box sx={{ px: 2, mx: 2 }}>
-              <Typography variant="body1">Contact me</Typography>
-              <Copyright />
-            </Box>
-            <Box sx={{ px: 2, mx: 2 }}>
-              <FooterIcon link={"https://github.com/takagiyuuki"}>
-                <GitHubIcon />
-              </FooterIcon>
-              <FooterIcon link={"https://www.linkedin.com/in/takagiyuuki"}>
-                <LinkedInIcon />
-              </FooterIcon>
-              <FooterIcon link={"https://linktr.ee/yuukitakagi"}>
-                <SiLinktree />
-              </FooterIcon>
-            </Box>
-          </Toolbar>
+          <SiteIcon>
+            <EggAltIcon />
+          </SiteIcon>
+          <Typography variant="body1" sx={{ px: 1, m: "auto" }}>
+            Contact me
+          </Typography>
+          <Box sx={{ px: 1, m: "auto" }}>
+            <FooterIcon link={"https://github.com/takagiyuuki"}>
+              <GitHubIcon />
+            </FooterIcon>
+            <FooterIcon link={"https://www.linkedin.com/in/takagiyuuki"}>
+              <LinkedInIcon />
+            </FooterIcon>
+            <FooterIcon link={"https://linktr.ee/yuukitakagi"}>
+              <SiLinktree />
+            </FooterIcon>
+          </Box>
+          <Copyright />
         </Container>
       </Box>
     </ThemeProvider>
