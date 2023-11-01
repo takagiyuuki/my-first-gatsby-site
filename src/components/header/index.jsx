@@ -1,24 +1,8 @@
 import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import { Link } from "gatsby";
 import * as styles from "../../styles/header.module.scss";
-import { useTranslation } from "react-i18next";
 
 export const Header = () => {
-  const { t, i18n } = useTranslation();
-  const changeLang = (lang) => {
-    i18n.changeLanguage(lang);
-  };
-
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.siteTitle}>
@@ -28,12 +12,12 @@ export const Header = () => {
         <ul className={styles.navLink}>
           <li className={styles.navLinkItem}>
             <Link to="/about" className={styles.navLinkItemText}>
-              {t("navbar.About")}
+              About
             </Link>
           </li>
           <li className={styles.navLinkItem}>
             <Link to="/contact" className={styles.navLinkItemText}>
-              {t("navbar.Contact")}
+              Contact
             </Link>
           </li>
           <li className={styles.navLinkItem}>
@@ -43,17 +27,17 @@ export const Header = () => {
               alt="My Blog"
               className={styles.navLinkItemText}
             >
-              {t("navbar.Blog")}
+              Blog
             </a>
           </li>
           <li className={styles.navLinkItem}>
             <Link to="/services" className={styles.navLinkItemText}>
-              {t("navbar.Services")}
+              Services
             </Link>
           </li>
           <li className={styles.navLinkItem}>
             <Link to="/artwork" className={styles.navLinkItemText}>
-              {t("navbar.Artwork")}
+              Artwork
             </Link>
           </li>
         </ul>

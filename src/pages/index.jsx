@@ -4,21 +4,20 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import { Seo } from "../components/seo";
 // import * as styles from "../styles/content.module.scss";
-import { useTranslation } from "react-i18next";
 
 import { Contact } from "../components/contact";
 import About from "../content/about.mdx";
 
 const IndexPage = () => {
-  const { t } = useTranslation();
-
   return (
-    <Layout pageTitle={t("topPage.greeting")}>
+    <Layout pageTitle="Hi">
       <StaticImage
         alt="Static"
         src="https://source.unsplash.com/featured/?rain"
       />
-      <p>{t("topPage.introText")}</p>
+      <p>
+        Welcome My branding site.I'm Yuki.This website is my branding pages.
+      </p>
       <About />
       <Contact />
     </Layout>
