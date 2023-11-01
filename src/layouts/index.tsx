@@ -5,47 +5,51 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
-import { HideOnScroll } from "../components/AppBar/HideAppBar";
+// import { HideOnScroll } from "../components/AppBar/HideAppBar";
 import { ScrollTop } from "../components/AppBar/BackToTop";
 
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import Fab from "@mui/material/Fab";
+// import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+// import Fab from "@mui/material/Fab";
 
 import { HeaderBar } from "../components/header/sample";
 import { Footer } from "../components/footer";
 
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+// import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#FF5733",
-    },
-    secondary: {
-      main: "#E0C2FF",
-      light: "#F5EBFF",
-      // dark: will be calculated from palette.secondary.main,
-      contrastText: "#47008F",
-    },
-  },
-});
+import { DefaultTheme } from "./DefaultTheme";
 
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-  children: React.ReactElement;
-}
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: "#FF5733",
+//     },
+//     secondary: {
+//       main: "#E0C2FF",
+//       light: "#F5EBFF",
+//       // dark: will be calculated from palette.secondary.main,
+//       contrastText: "#47008F",
+//     },
+//   },
+// });
 
-export function Layout(pageTitle, children, props: Props) {
+// interface Props {
+//   /**
+//    * Injected by the documentation to work in an iframe.
+//    * You won't need it on your project.
+//    */
+//   window?: () => Window;
+//   children: React.ReactElement;
+// }
+
+// export function Layout(pageTitle, children, props: Props) {
+export function Layout(pageTitle, children) {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={DefaultTheme}>
       <CssBaseline />
-      <HideOnScroll {...props}>
-        <HeaderBar />
-      </HideOnScroll>
+      {/* <HideOnScroll {...props}> */}
+      <HeaderBar />
+      {/* </HideOnScroll> */}
       <Toolbar id="back-to-top-anchor" />
       <Container>
         <Box sx={{ my: 2 }}>
@@ -55,11 +59,12 @@ export function Layout(pageTitle, children, props: Props) {
           {children}
         </Box>
       </Container>
-      <ScrollTop>
+      <ScrollTop />
+      {/* <ScrollTop>
         <Fab size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
-      </ScrollTop>
+      </ScrollTop> */}
       <Footer />
     </ThemeProvider>
   );
