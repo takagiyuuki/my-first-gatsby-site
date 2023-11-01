@@ -11,7 +11,7 @@ services:
       context: .
       dockerfile: ./Dockerfile
     restart: always
-    command: yarn start:dev
+    command: "npx gatsby start"
     ports:
       - "3000:3000" # react
       - "8000:8000" # gatsby develop

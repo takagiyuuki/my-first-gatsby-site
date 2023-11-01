@@ -1,7 +1,7 @@
 #### base ####
 # cache our node version for installing later
-FROM node:20.5.0-slim  AS node
-FROM ubuntu:focal-20220531 as base
+FROM node:20.5.0-bullseye-slim  AS node
+FROM ubuntu:focal-20220531 AS base
 ENV NODE_ENV=production
 # Avoid running nodejs process as PID 1 (use tini)
 # You may also need development tools to build native npm addons:
@@ -28,22 +28,24 @@ RUN groupadd --gid 1000 node \
 
 WORKDIR /workspace
 USER node
-COPY --chown=node:node package*.json ./
-RUN npm ci && npm cache clean --force
+# COPY --chown=node:node package*.json ./
+# COPY --chown=node:node ../package.json ./
+# COPY --chown=node:node ../package-lock.json ./
+# RUN npm ci --only=production && npm cache clean --force
 
 #### dev ####
 # no source to be added, and assumes bind mount
-FROM base as dev
+FROM base AS dev
 ENV NODE_ENV=development
 ENV PATH=/app/node_modules/.bin:$PATH
-RUN npm install && npm install -g gatsby-cli && npm cache clean --force
-CMD [ "gatsby", "develop" ]
+# RUN npm ci --only=development && npm install -g gatsby-cli && npm cache clean --force
+# CMD [ "gatsby", "develop" ]
 
 #### source ####
-FROM base as source
+FROM base AS source
 COPY --chown=node:node . .
 
 #### prod ####
-FROM source as prod
+FROM source AS prod
 ENTRYPOINT ["/usr/bin/tini", "--"]
-CMD ["gatsby", "build" ]
+# CMD ["gatsby", "build" ]
