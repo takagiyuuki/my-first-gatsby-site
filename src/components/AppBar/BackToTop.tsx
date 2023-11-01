@@ -3,6 +3,9 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Box from "@mui/material/Box";
 import Fade from "@mui/material/Fade";
 
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import Fab from "@mui/material/Fab";
+
 interface Props {
   /**
    * Injected by the documentation to work in an iframe.
@@ -13,7 +16,8 @@ interface Props {
 }
 
 export function ScrollTop(props: Props) {
-  const { children, window } = props;
+  // const { children, window } = props;
+  const { window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
@@ -42,7 +46,9 @@ export function ScrollTop(props: Props) {
         role="presentation"
         sx={{ position: "fixed", bottom: 16, right: 16 }}
       >
-        {children}
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
       </Box>
     </Fade>
   );
