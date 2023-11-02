@@ -35,16 +35,3 @@ html {
     --border-color: rgb(205, 205, 205);
   }
 }
-
-/* Sass Valiables */
-$background-body: var(--background-body);
-$background-alt: var(--background-alt);
-$text-menu: var(--text-menu);
-$text-strong: var(--text-strong);
-$text-main: var(--text-main);
-$text-muted: var(--text-muted);
-$text-hover: var(--text-hover);
-$accent: var(--accent);
-$focus: var(--focus);
-$visited: var(--visited);
-$border-color: var(--border-color);

@@ -49,7 +49,6 @@ module.exports = {
         cache_busting_mode: `none`,
       },
     },
-    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -59,7 +58,6 @@ module.exports = {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -84,12 +82,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-smartypants`,
+          {
+            resolve: `gatsby-remark-smartypants`,
+            options: {
+              dashes: `oldschool`,
+            },
+          },
           `gatsby-remark-autolink-headers`,
         ],
-        mdxOptions: {
-          remarkPlugins: [require(`remark-gfm`)],
-        },
       },
     },
     {

@@ -6,12 +6,12 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 
 // import { HideOnScroll } from "../components/AppBar/HideAppBar";
-import { ScrollTop } from "../components/AppBar/BackToTop";
+// import { ScrollTop } from "../components/AppBar/BackToTop";
 
 // import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 // import Fab from "@mui/material/Fab";
 
-import { HeaderBar } from "../components/header/sample";
+// import { HeaderBar } from "../components/header/sample";
 import { Footer } from "../components/footer";
 
 // import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -48,7 +48,7 @@ export function Layout(pageTitle, children) {
     <ThemeProvider theme={DefaultTheme}>
       <CssBaseline />
       {/* <HideOnScroll {...props}> */}
-      <HeaderBar />
+      {/* <HeaderBar /> */}
       {/* </HideOnScroll> */}
       <Toolbar id="back-to-top-anchor" />
       <Container>
@@ -59,7 +59,6 @@ export function Layout(pageTitle, children) {
           {children}
         </Box>
       </Container>
-      <ScrollTop />
       {/* <ScrollTop>
         <Fab size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
