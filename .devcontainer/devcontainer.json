@@ -2,60 +2,63 @@
 {
   "name": "gatsby-dev",
   "build": {
-    "dockerFile": "./Dockerfile",
+    "dockerfile": "./Dockerfile",
     "context": ".",
-    "runArgs": ["--hostname=localhost", "--name=gatsby-dev"]
-  },
-  "workspaceFolder": "/${localWorkspaceFolderBasename}",
-  "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {
-      "installDirectlyFromGitHubRelease": true,
-      "version": "latest"
-    }
-  },
-  "forwardPorts": [8000],
-  "postCreateCommand": "./postCreateCommand.sh",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "christian-kohler.npm-intellisense",
-        "christian-kohler.path-intellisense",
-        "dbaeumer.vscode-eslint",
-        "donjayamanne.githistory",
-        "dotenv.dotenv-vscode",
-        "eamodio.gitlens",
-        "ecmel.vscode-html-css",
-        "editorconfig.editorconfig",
-        "esbenp.prettier-vscode",
-        "extensions.json",
-        "fnando.linter",
-        "humao.rest-client",
-        "mhutchie.git-graph",
-        "michaelcurrin.auto-commit-msg",
-        "ms-azuretools.vscode-docker",
-        "msjsdiag.vscode-react-native",
-        "nickdemayo.vscode-json-editor",
-        "oderwat.indent-rainbow",
-        "orta.vscode-jest",
-        "sandcastle.vscode-open",
-        "tabnine.tabnine-vscode",
-        "tomoki1207.vscode-input-sequence",
-        "visualstudioexptteam.intellicode-api-usage-examples",
-        "visualstudioexptteam.vscodeintellicode",
-        "wakatime.vscode-wakatime",
-        "wmaurer.change-case",
-        "ymotongpoo.licenser"
-      ]
-    }
+    "args": { "VERSION": "20.5.0-bullseye-slim" }
   },
   "mounts": [
     {
       "source": "${localWorkspaceFolder}",
-      "target": "${containerWorkspaceFolder}/"
+      "target": "${containerWorkspaceFolder}/",
+      "type": "volume"
     },
     "target=${containerWorkspaceFolder}/node_modules,type=volume",
     "target=${containerWorkspaceFolder}/.cashe,type=volume",
     "target=${containerWorkspaceFolder}/public,type=volume"
   ],
-  "shutdownAction": "stopContainer"
+  "runArgs": ["--hostname=localhost", "--name=gatsby-dev"],
+  "workspaceFolder": "/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "sudo chown node /${localWorkspaceFolderBasename}",
+  "remoteUser": "node",
+  "shutdownAction": "stopContainer",
+  "forwardPorts": [8000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+		"christian-kohler.npm-intellisense",
+		"christian-kohler.path-intellisense",
+		"dbaeumer.vscode-eslint",
+		"donjayamanne.githistory",
+		"dotenv.dotenv-vscode",
+		"eamodio.gitlens",
+		"ecmel.vscode-html-css",
+		"editorconfig.editorconfig",
+		"esbenp.prettier-vscode",
+		"extensions.json",
+		"fnando.linter",
+		"humao.rest-client",
+		"mhutchie.git-graph",
+		"michaelcurrin.auto-commit-msg",
+		"ms-azuretools.vscode-docker",
+		"msjsdiag.vscode-react-native",
+		"nickdemayo.vscode-json-editor",
+		"oderwat.indent-rainbow",
+		"orta.vscode-jest",
+		"sandcastle.vscode-open",
+		"tabnine.tabnine-vscode",
+		"tomoki1207.vscode-input-sequence",
+		"visualstudioexptteam.intellicode-api-usage-examples",
+		"visualstudioexptteam.vscodeintellicode",
+		"wakatime.vscode-wakatime",
+		"wmaurer.change-case",
+		"ymotongpoo.licenser",
+		"MichaelCurrin.auto-commit-msg",
+		"EditorConfig.EditorConfig",
+		"Orta.vscode-jest",
+		"VisualStudioExptTeam.intellicode-api-usage-examples",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"GitHub.vscode-pull-request-github"
+	]
+    }
+  }
 }
