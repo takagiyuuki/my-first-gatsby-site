@@ -59,7 +59,6 @@ module.exports = {
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -71,6 +70,7 @@ module.exports = {
       resolve: "gatsby-plugin-mdx",
       options: {
         extensions: [`.mdx`, `.md`],
+        gfm: true,
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -84,12 +84,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-smartypants`,
+          {
+            resolve: "gatsby-remark-smartypants",
+            options: {
+              dashes: "oldschool",
+            },
+          },
           `gatsby-remark-autolink-headers`,
         ],
-        mdxOptions: {
-          remarkPlugins: [require(`remark-gfm`)],
-        },
       },
     },
     {
