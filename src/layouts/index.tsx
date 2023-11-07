@@ -40,13 +40,14 @@ import { Footer } from "../components/footer";
 // }
 
 // export function Layout(pageTitle, children, props: Props) {
-export function Layout(pageTitle, children) {
+export const Layout = ({ pageTitle, children }) => {
+  // export function Layout(pageTitle, children) {
   return (
     <>
-    {/* <ThemeProvider theme={theme}> */}
+      {/* <ThemeProvider theme={theme}> */}
       <CssBaseline />
       {/* <HideOnScroll {...props}> */}
-        <HeaderBar />
+      <HeaderBar />
       {/* </HideOnScroll> */}
       <Toolbar id="back-to-top-anchor" />
       <Container>
@@ -66,4 +67,4 @@ export function Layout(pageTitle, children) {
       {/* </ThemeProvider> */}
     </>
   );
-}
+};
