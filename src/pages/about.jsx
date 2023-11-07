@@ -3,7 +3,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Layout } from "../layouts";
 import { Seo } from "../components/seo";
 import About from "../content/about.mdx";
-// import * as styles from "../styles/content.module.scss";
 
 const AboutPage = () => {
   return (
