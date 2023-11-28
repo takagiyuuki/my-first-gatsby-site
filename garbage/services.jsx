@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Layout } from "../layouts";
-import { Seo } from "../components/seo";
+import { Layout } from "../src/layouts";
+import { Seo } from "../src/components/seo";
 
 const ServicesPage = () => {
   return (

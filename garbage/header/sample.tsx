@@ -13,7 +13,7 @@ import { MdEggAlt } from "react-icons/md";
 // LocalComponents
 import { HeaderMenuIcon } from "./HeaderMenuIcon";
 import { HeaderMenuLang } from "./HeaderMenuLang";
-import { HideOnScroll } from "../AppBar/HideAppBar";
+import { HideOnScroll } from "../../src/components/AppBar/HideAppBar";
 
 // interface Props {
 //   /**

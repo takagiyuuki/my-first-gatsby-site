@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Layout } from "../layouts";
 import { Seo } from "../components/seo";
 
-const Artwork = () => {
+const Work = () => {
   return (
     <Layout pageTitle="Artwork">
       <h2>Illustration</h2>
@@ -27,4 +27,4 @@ const Artwork = () => {
 };
 
 export const Head = () => <Seo title="Artwork" />;
-export default Artwork;
+export default Work;

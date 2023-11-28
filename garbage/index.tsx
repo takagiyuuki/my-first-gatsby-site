@@ -11,8 +11,8 @@ import Container from "@mui/material/Container";
 // import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 // import Fab from "@mui/material/Fab";
 
-import { HeaderBar } from "../components/header/sample";
-import { Footer } from "../components/footer";
+import { HeaderBar } from "../../garbage/header/sample";
+import { Footer } from "../../garbage/footer";
 
 // import { ThemeProvider } from "@mui/material/styles";
 
